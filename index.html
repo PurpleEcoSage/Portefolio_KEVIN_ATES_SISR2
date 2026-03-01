@@ -13,7 +13,8 @@
             <!-- Google Fonts -->
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+            <link
+                href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;600;700;800&display=swap"
                 rel="stylesheet">
             <link rel="stylesheet" href="style.css">
             <script type="text/javascript"
@@ -101,11 +102,12 @@
         <div class="floating-element floating-element-2"></div>
         <div class="floating-element floating-element-3"></div>
         <div class="hero-content">
-            <h1>Kevin Ates<br>Portfolio BTS SIO SISR</h1>
-            <p class="subtitle">Administration systèmes & réseaux • Cybersécurité • Virtualisation • Support
+            <h1 class="gsap-reveal">Kevin Ates<br>Portfolio BTS SIO SISR</h1>
+            <p class="subtitle gsap-reveal stagger-1">Administration systèmes & réseaux • Cybersécurité • Virtualisation
+                • Support
                 aux utilisateurs • Projets en entreprise</p>
-            <div class="cta">
-                <a href="#projets" class="cta-button">Voir mes projets</a>
+            <div class="cta gsap-scale stagger-2">
+                <a href="#projets" class="cta-button magnetic-btn">Voir mes projets</a>
             </div>
         </div>
     </section>
@@ -114,8 +116,8 @@
     <section class="about" id="apropos">
         <div class="container">
             <div class="about-content">
-                <div class="about-text">
-                    <h2>À propos de moi</h2>
+                <div class="about-text gsap-fade">
+                    <h2 class="gsap-reveal">À propos de moi</h2>
                     <p>
                         Je m'appelle <strong>Kevin Ates</strong>, j'ai <strong>22 ans</strong> et je suis un étudiant
                         en <strong>BTS SIO option SISR</strong> (Solutions d'Infrastructure, Systèmes et Réseaux).
@@ -138,9 +140,8 @@
                         projets et de ma détermination.
                     </p>
                 </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1580894732444-8ec53395954a?w=800&h=600&fit=crop"
-                        alt="Étudiant en informatique travaillant sur un projet" width="800" height="600" loading="lazy"
+                <div class="about-image image-reveal-container gsap-scale">
+                    <img src="unnamed.jpg" alt="Photo de profil de Kevin Ates" width="800" height="600" loading="lazy"
                         style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
                 </div>
             </div>
@@ -193,8 +194,8 @@
     <section class="about" id="entreprise">
         <div class="container">
             <div class="about-content">
-                <div class="about-text">
-                    <h2>Mon entreprise – Infoconcept</h2>
+                <div class="about-text gsap-fade">
+                    <h2 class="gsap-reveal">Mon entreprise – Infoconcept</h2>
                     <p>
                         <strong>Infoconcept</strong>, fondée en 2009 et située au Mesnil-Amelot, est une société de
                         services informatiques dédiée à l'accompagnement des <strong>PME, commerces, restaurants et
@@ -208,7 +209,7 @@
                         réseau), de systèmes de <strong>vidéosurveillance Dahua</strong> et de consommables.
                     </p>
                     <div style="text-align: center; margin: 2rem 0;">
-                        <button id="toggle-entreprise-btn" class="cta-button" onclick="toggleEntreprise()"
+                        <button id="toggle-entreprise-btn" class="cta-button magnetic-btn" onclick="toggleEntreprise()"
                             style="padding: 0.8rem 2rem; font-size: 0.95rem; cursor: pointer;">
                             En savoir plus sur le service IT
                         </button>
@@ -344,13 +345,13 @@
     <section class="about" id="parcours">
         <div class="container">
             <div class="about-content">
-                <div class="about-image">
+                <div class="about-image image-reveal-container gsap-scale">
                     <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&fit=crop"
                         alt="Parcours scolaire et professionnel" width="800" height="600" loading="lazy"
                         style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
                 </div>
-                <div class="about-text">
-                    <h2>Mon parcours</h2>
+                <div class="about-text gsap-fade">
+                    <h2 class="gsap-reveal">Mon parcours</h2>
                     <p>
                         Mon parcours est un peu atypique et témoigne de ma capacité d'adaptation. Après l'obtention
                         de mon <strong>baccalauréat en 2021</strong>, avec les spécialités Mathématiques et Sciences
@@ -377,7 +378,7 @@
     <!-- Projets (ex-portfolio) -->
     <section class="portfolio" id="projets">
         <div class="container">
-            <h2>Missions</h2>
+            <h2 class="gsap-reveal">Missions</h2>
             <div class="project-filters">
                 <button class="project-btn" onclick="filterProjects('entreprise', this)">Mission en entreprise</button>
                 <button class="project-btn" onclick="filterProjects('formation', this)">Mission en formation</button>
@@ -388,7 +389,7 @@
                     entreprise</h3>
                 <div class="portfolio-grid">
                     <!-- Projet en entreprise 1 -->
-                    <div class="portfolio-item">
+                    <div class="portfolio-item gsap-reveal">
                         <div class="portfolio-image">
                             <img src="https://images.unsplash.com/photo-1573167507387-6b3a86cb7c94?w=800&fit=crop"
                                 alt="Installation de système de caisse" width="400" height="300" loading="lazy">
@@ -396,7 +397,7 @@
                                 <div class="portfolio-overlay-content">
                                     <h4>Voir le projet</h4>
                                     <p>Installation complète de caisses enregistreuses chez les clients.</p>
-                                    <a href="#" class="portfolio-link">Voir la documentation</a>
+                                    <a href="#" class="portfolio-link magnetic-btn">Voir la documentation</a>
                                 </div>
                             </div>
                         </div>
@@ -418,7 +419,7 @@
                     </div>
 
                     <!-- Projet en entreprise 2 -->
-                    <div class="portfolio-item">
+                    <div class="portfolio-item gsap-reveal">
                         <div class="portfolio-image">
                             <img src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=800&fit=crop"
                                 alt="Déploiement d'images Windows" width="400" height="300" loading="lazy">
@@ -426,7 +427,7 @@
                                 <div class="portfolio-overlay-content">
                                     <h4>Voir le projet</h4>
                                     <p>Préparation de postes et de caisses avec Acronis True Image.</p>
-                                    <a href="#" class="portfolio-link">Voir la documentation</a>
+                                    <a href="#" class="portfolio-link magnetic-btn">Voir la documentation</a>
                                 </div>
                             </div>
                         </div>
@@ -448,7 +449,7 @@
                     </div>
 
                     <!-- Projet en entreprise 3 -->
-                    <div class="portfolio-item">
+                    <div class="portfolio-item gsap-reveal">
                         <div class="portfolio-image">
                             <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&fit=crop"
                                 alt="Configuration MySQL" width="400" height="300" loading="lazy">
@@ -456,7 +457,7 @@
                                 <div class="portfolio-overlay-content">
                                     <h4>Voir le projet</h4>
                                     <p>Configuration de base de données avec MySQL Administrator.</p>
-                                    <a href="#" class="portfolio-link">Voir la documentation</a>
+                                    <a href="#" class="portfolio-link magnetic-btn">Voir la documentation</a>
                                 </div>
                             </div>
                         </div>
@@ -484,7 +485,7 @@
                     scolaires</h3>
                 <div class="portfolio-grid">
                     <!-- Projet école 1 -->
-                    <div class="portfolio-item">
+                    <div class="portfolio-item gsap-reveal">
                         <div class="portfolio-image">
                             <img src="https://images.unsplash.com/photo-1580106815433-a5b1d1d53d85?w=800&fit=crop"
                                 alt="Active Directory & services réseau" width="400" height="300" loading="lazy">
@@ -492,7 +493,8 @@
                                 <div class="portfolio-overlay-content">
                                     <h4>Voir le projet</h4>
                                     <p>Gestion des utilisateurs et des postes via GPO et scripts.</p>
-                                    <a href="Compte rendu - AD-GPO-SF.pdf" class="portfolio-link" download>Télécharger
+                                    <a href="Compte rendu - AD-GPO-SF.pdf" class="portfolio-link magnetic-btn"
+                                        download>Télécharger
                                         le dossier</a>
                                 </div>
                             </div>
@@ -514,7 +516,7 @@
                     </div>
 
                     <!-- Projet école 2 -->
-                    <div class="portfolio-item">
+                    <div class="portfolio-item gsap-reveal">
                         <div class="portfolio-image">
                             <img src="https://images.unsplash.com/photo-1691435828932-911a7801adfb?w=800&fit=crop"
                                 alt="Transfert de rôles FSMO" width="400" height="300" loading="lazy">
@@ -522,7 +524,8 @@
                                 <div class="portfolio-overlay-content">
                                     <h4>Voir le projet</h4>
                                     <p>Migration d'un contrôleur de domaine et transfert des rôles FSMO.</p>
-                                    <a href="KA Compte Rendu FSMO.pdf" class="portfolio-link" download>Télécharger le
+                                    <a href="KA Compte Rendu FSMO.pdf" class="portfolio-link magnetic-btn"
+                                        download>Télécharger le
                                         dossier</a>
                                 </div>
                             </div>
@@ -547,7 +550,7 @@
 
 
                     <!-- Projet école 3 (Pfsense) -->
-                    <div class="portfolio-item">
+                    <div class="portfolio-item gsap-reveal">
                         <div class="portfolio-image">
                             <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&fit=crop"
                                 alt="Haute Disponibilité Pfsense" width="400" height="300" loading="lazy">
@@ -555,7 +558,8 @@
                                 <div class="portfolio-overlay-content">
                                     <h4>Voir le projet</h4>
                                     <p>Mise en place de haute disponibilité avec Pfsense (CARP).</p>
-                                    <a href="Compte Rendu - HD Pfsense .pdf" class="portfolio-link" download>Télécharger
+                                    <a href="Compte Rendu - HD Pfsense .pdf" class="portfolio-link magnetic-btn"
+                                        download>Télécharger
                                         le dossier</a>
                                 </div>
                             </div>
@@ -584,7 +588,7 @@
     <section class="services" id="veille">
         <div class="container veille">
             <h2 style="text-align: center;">Veille Technologique : IA & Infrastructures</h2>
-            <p class="subtitle"
+            <p class="subtitle gsap-reveal stagger-1"
                 style="text-align: center; margin-bottom: 2rem; color: var(--primary); font-weight: 500;">
                 L'impact de l'Intelligence Artificielle sur la sécurité et l'automatisation des Systèmes d'Information.
             </p>
@@ -661,11 +665,15 @@
                 </div>
                 <div class="card-body">
                     <div class="card-section">
-                        <h4>Le Résumé</h4>
+                        <h4>L'Exemple de l'Araignée Sauteuse</h4>
                         <p>"L'alignement désigne la difficulté de forcer une IA à respecter l'intention humaine plutôt
-                            que la lettre exacte de son code. L'exemple du 'Maximisateur de Trombones' démontre qu'une
-                            IA optimisée pour un but simple peut détruire son environnement pour acquérir des ressources
-                            si aucune limite explicite n'est codée."</p>
+                            que la lettre exacte de son code. L'exemple de l'araignée sauteuse l'illustre parfaitement :
+                            une IA contrôle une araignée virtuelle située sous une ligne noire. On lui demande
+                            d'apprendre à sauter pour que ses pattes passent au-dessus de la ligne. L'IA apprend d'abord
+                            à sauter, puis développe une technique inattendue (elle trouve un 'bug physique') : elle
+                            fait la roue. Ses pattes restent ainsi constamment au-dessus de la ligne. Elle fait
+                            exactement ce qu'on lui a demandé mathématiquement, mais pas de la manière désirée. C'est le
+                            cœur du problème de l'alignement."</p>
                     </div>
 
                     <div class="analysis-box">
@@ -690,7 +698,7 @@
 
             <div class="see-more">
                 <a href="https://dazzling-oriole-017.notion.site/Veille-Technologique-BTS-SIO-2e848f26c66280d6b692cafa0bf4111c?source=copy_link"
-                    target="_blank" class="cta-button">Accéder à mon journal de veille complet (Notion)</a>
+                    target="_blank" class="cta-button magnetic-btn">Accéder à mon journal de veille complet (Notion)</a>
             </div>
         </div>
     </section>
@@ -701,7 +709,7 @@
             <h2 style="text-align: center; margin-bottom: 3rem; color: var(--primary);">Projets Personnels</h2>
             <div class="personal-projects-list">
                 <!-- Project 1: Site Vitrine -->
-                <div class="project-card">
+                <div class="project-card gsap-reveal">
                     <div class="project-visual">
                         <img src="interieur-moderne.jpg"
                             alt="Aper&amp;ccedil;u d'un int&amp;eacute;rieur moderne pour le site vitrine" width="900"
@@ -709,7 +717,7 @@
                         <div class="project-badge">Site vitrine &middot; Client r&eacute;el</div>
                         <div class="project-link">
                             <a href="https://purpleecosage.github.io/mon-site-patisserie/" target="_blank"
-                                rel="noopener noreferrer" class="cta-button">Voir en ligne</a>
+                                rel="noopener noreferrer" class="cta-button magnetic-btn">Voir en ligne</a>
                         </div>
                     </div>
                     <div class="project-details">
@@ -738,13 +746,13 @@
                 </div>
 
                 <!-- Project 2: AURA -->
-                <div class="project-card">
+                <div class="project-card gsap-reveal">
                     <div class="project-visual">
                         <img src="fond.png" alt="Aperçu du projet AURA" width="900" height="650" loading="lazy">
                         <div class="project-badge">Expérience Web &middot; 3D / Design</div>
                         <div class="project-link">
                             <a href="https://purpleecosage.github.io/AURA/" target="_blank" rel="noopener noreferrer"
-                                class="cta-button">Découvrir l'expérience</a>
+                                class="cta-button magnetic-btn">Découvrir l'expérience</a>
                         </div>
                     </div>
                     <div class="project-details">
@@ -774,7 +782,7 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2>Contact & informations</h2>
+            <h2 class="gsap-reveal">Contact & informations</h2>
             <div class="contact-content">
                 <div class="contact-info">
                     <h3>Me contacter</h3>
@@ -1004,22 +1012,154 @@
             });
         }
 
-        // Scroll reveal animations (already implemented)
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
+        // ----------------------------------------------------
+        // ADD CDN LIBRARIES
+        // ----------------------------------------------------
+        const gsapScript = document.createElement('script');
+        gsapScript.src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js";
+        document.body.appendChild(gsapScript);
 
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section, {
-                rootMargin: '0px 0px -100px 0px'
+        const ScrollTriggerScript = document.createElement('script');
+        ScrollTriggerScript.src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js";
+        document.body.appendChild(ScrollTriggerScript);
+
+        const lenisScript = document.createElement('script');
+        lenisScript.src = "https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js";
+        document.body.appendChild(lenisScript);
+
+        // Wait for scripts to load before initializing animations
+        let scriptsLoaded = 0;
+        const initScripts = () => {
+            scriptsLoaded++;
+            if (scriptsLoaded === 3) {
+                initAnimations();
+            }
+        };
+
+        gsapScript.onload = initScripts;
+        ScrollTriggerScript.onload = initScripts;
+        lenisScript.onload = initScripts;
+
+        function initAnimations() {
+            // ----------------------------------------------------
+            // ADVANCED SCROLL ANIMATIONS (GSAP + Lenis)
+            // ----------------------------------------------------
+
+            // Initialize Lenis for Smooth Scrolling
+            const lenis = new Lenis({
+                duration: 1.2,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                direction: 'vertical',
+                gestureDirection: 'vertical',
+                smooth: true,
+                mouseMultiplier: 1,
+                smoothTouch: false,
+                touchMultiplier: 2,
+                infinite: false,
             });
-        });
+
+            // Get scroll value
+            lenis.on('scroll', ScrollTrigger.update);
+
+            gsap.ticker.add((time) => {
+                lenis.raf(time * 1000);
+            });
+
+            gsap.ticker.lagSmoothing(0);
+
+            // GSAP Animations
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Define animations
+            // 1. Reveal (Text & Elements sliding up)
+            gsap.utils.toArray('.gsap-reveal').forEach(elem => {
+                gsap.fromTo(elem,
+                    { y: 50, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        ease: "power3.out",
+                        scrollTrigger: {
+                            trigger: elem,
+                            start: "top 90%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // 2. Fade (Simple opacity fade)
+            gsap.utils.toArray('.gsap-fade').forEach(elem => {
+                gsap.fromTo(elem,
+                    { opacity: 0 },
+                    {
+                        opacity: 1,
+                        duration: 1.2,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: elem,
+                            start: "top 85%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // 3. Scale (Images/Cards zooming in slightly)
+            gsap.utils.toArray('.gsap-scale').forEach(elem => {
+                gsap.fromTo(elem,
+                    { scale: 0.9, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 1,
+                        ease: "back.out(1.7)",
+                        scrollTrigger: {
+                            trigger: elem,
+                            start: "top 90%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Magnetic Buttons Logic
+            const magneticBtns = document.querySelectorAll('.magnetic-btn');
+            magneticBtns.forEach(btn => {
+                btn.addEventListener('mousemove', function (e) {
+                    const position = btn.getBoundingClientRect();
+                    const x = e.pageX - position.left - position.width / 2;
+                    const y = e.pageY - position.top - position.height / 2;
+
+                    gsap.to(btn, {
+                        x: x * 0.3,
+                        y: y * 0.5,
+                        duration: 0.6,
+                        ease: "power3.out"
+                    });
+                });
+
+                btn.addEventListener('mouseleave', function (e) {
+                    gsap.to(btn, {
+                        x: 0,
+                        y: 0,
+                        duration: 0.6,
+                        ease: "elastic.out(1, 0.3)"
+                    });
+                });
+            });
+
+            // Keep original section observer for compatibility 
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('section').forEach(section => sectionObserver.observe(section));
+        }
     </script>
     <script>
         function filterProjects(categoryId, btn) {
