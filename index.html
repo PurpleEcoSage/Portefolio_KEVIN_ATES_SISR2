@@ -5,25 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kevin Ates - Portfolio BTS SIO SISR</title>
-    < <meta name="description"
+    <meta name="description"
         content="Portfolio de Kevin Ates, étudiant en BTS SIO option SISR. Découvrez mes projets en administration systèmes, réseaux, cybersécurité et mon expérience chez Infoconcept.">
-        < <meta name="keywords"
-            content="portfolio, bts sio, sisr, kevin ates, administrateur système, réseau, cybersécurité, infoconcept">
+    <meta name="keywords"
+        content="portfolio, bts sio, sisr, kevin ates, administrateur système, réseau, cybersécurité, infoconcept">
 
-            <!-- Google Fonts -->
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link
-                href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;600;700;800&display=swap"
-                rel="stylesheet">
-            <link rel="stylesheet" href="style.css">
-            <script type="text/javascript"
-                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-            <script type="text/javascript">
-                (function () {
-                    emailjs.init("0IKg4ABumGUnUfYNV");
-                })();
-            </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("0IKg4ABumGUnUfYNV");
+        })();
+    </script>
+    <!-- Dépendances GSAP & Lenis via defer pour de meilleures performances -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js" defer></script>
 </head>
 
 <body>
@@ -42,18 +45,49 @@
         </div>
     </div>
 
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="nav-container">
-            <a href="#accueil" class="logo">
-                <div class="logo-dots">
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
+    <!-- Header / Navigation -->
+    <header>
+        <nav id="navbar">
+            <div class="nav-container">
+                <a href="#accueil" class="logo">
+                    <div class="logo-dots">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    Kevin
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#apropos">À propos de moi</a></li>
+                    <li><a href="#entreprise">Mon entreprise</a></li>
+                    <li><a href="#parcours">Parcours</a></li>
+                    <li><a href="#projets">Projets</a></li>
+                    <li><a href="#veille">Veille Technologique</a></li>
+                    <li><a href="#projet-perso">Projet Personnel</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-                Kevin
-            </a>
-            <ul class="nav-links">
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-header">
+                <div class="logo">
+                    <div class="logo-dots">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    Kevin
+                </div>
+            </div>
+            <ul class="mobile-menu-links">
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#apropos">À propos de moi</a></li>
                 <li><a href="#entreprise">Mon entreprise</a></li>
@@ -63,796 +97,807 @@
                 <li><a href="#projet-perso">Projet Personnel</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
-    </nav>
+        <div class="overlay" id="overlay"></div>
+    </header>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-menu-header">
-            <div class="logo">
-                <div class="logo-dots">
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                    <div class="dot"></div>
-                </div>
-                Kevin
-            </div>
-        </div>
-        <ul class="mobile-menu-links">
-            <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#apropos">À propos de moi</a></li>
-            <li><a href="#entreprise">Mon entreprise</a></li>
-            <li><a href="#parcours">Parcours</a></li>
-            <li><a href="#projets">Projets</a></li>
-            <li><a href="#veille">Veille Technologique</a></li>
-            <li><a href="#projet-perso">Projet Personnel</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
-    <div class="overlay" id="overlay"></div>
-
-    <!-- Hero Section -->
-    <section class="hero" id="accueil">
-        <div class="floating-element floating-element-1"></div>
-        <div class="floating-element floating-element-2"></div>
-        <div class="floating-element floating-element-3"></div>
-        <div class="hero-content">
-            <h1 class="gsap-reveal">Kevin Ates<br>Portfolio BTS SIO SISR</h1>
-            <p class="subtitle gsap-reveal stagger-1">Administration systèmes & réseaux • Cybersécurité • Virtualisation
-                • Support
-                aux utilisateurs • Projets en entreprise</p>
-            <div class="cta gsap-scale stagger-2">
-                <a href="#projets" class="cta-button magnetic-btn">Voir mes projets</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section (À propos de moi) -->
-    <section class="about" id="apropos">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text gsap-fade">
-                    <h2 class="gsap-reveal">À propos de moi</h2>
-                    <p>
-                        Je m'appelle <strong>Kevin Ates</strong>, j'ai <strong>22 ans</strong> et je suis un étudiant
-                        en <strong>BTS SIO option SISR</strong> (Solutions d'Infrastructure, Systèmes et Réseaux).
-                        Depuis toujours attiré par la résolution de problèmes et la logique des systèmes
-                        informatiques, je me suis naturellement orienté vers l'administration des infrastructures pour
-                        construire et maintenir les fondations technologiques des entreprises.
-                    </p>
-                    <p>
-                        J'apprécie particulièrement la logique de l'administration des services comme <strong>Active
-                            Directory</strong>, la puissance de la segmentation réseau via les <strong>VLANs</strong>,
-                        et le défi de sécuriser un périmètre avec des pare-feux comme <strong>pfSense</strong>. La
-                        virtualisation (VMware, Hyper-V) est pour moi un terrain de jeu essentiel pour tester, apprendre
-                        et déployer des solutions sans risque.
-                    </p>
-                    <p>
-                        Actuellement en alternance chez <strong>Infoconcept</strong>, je mets ces compétences en
-                        pratique au quotidien. Mon objectif est clair : obtenir mon BTS et poursuivre en <strong>Licence
-                            Professionnelle</strong> pour devenir un <strong>administrateur systèmes et
-                            réseaux</strong> polyvalent et fiable. Ce portfolio est le reflet de mon parcours, de mes
-                        projets et de ma détermination.
-                    </p>
-                </div>
-                <div class="about-image image-reveal-container gsap-scale">
-                    <img src="unnamed.jpg" alt="Photo de profil de Kevin Ates" width="800" height="600" loading="lazy"
-                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="accueil">
+            <div class="floating-element floating-element-1"></div>
+            <div class="floating-element floating-element-2"></div>
+            <div class="floating-element floating-element-3"></div>
+            <div class="hero-content">
+                <h1 class="gsap-reveal">Kevin Ates<br>Portfolio BTS SIO SISR</h1>
+                <p class="subtitle gsap-reveal stagger-1">Administration systèmes & réseaux • Cybersécurité •
+                    Virtualisation
+                    • Support
+                    aux utilisateurs • Projets en entreprise</p>
+                <div class="cta gsap-scale stagger-2">
+                    <a href="#projets" class="cta-button magnetic-btn">Voir mes projets</a>
                 </div>
             </div>
+        </section>
 
-            <!-- Profil détaillé intégré -->
-            <div class="team-content"
-                style="margin-top: 5rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
-                <div class="team-image">
-                    <img src="unnamed.jpg" alt="Kevin Ates" width="250" height="250" loading="lazy"
-                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
-                    <div class="team-social">
-                        <a href="https://www.linkedin.com/in/kevin-ates/" target="_blank" rel="noopener noreferrer"
-                            aria-label="LinkedIn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path
-                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="team-info">
-                    <h3>Mon rôle chez Infoconcept</h3>
-                    <p class="team-role">Apprenti Informatique – BTS SIO SISR</p>
-                    <p class="team-bio">
-                        En tant qu'apprenti, je suis pleinement intégré au service technique. Mes missions incluent le
-                        <strong>support aux utilisateurs</strong>, l'installation de postes de travail et de caisses, la
-                        configuration réseau et la mise en place de solutions de déploiement.
-                    </p>
-                    <p class="team-bio">
-                        Cette expérience m'a permis de développer des compétences humaines essentielles : le
-                        <strong>contact client</strong>, la pédagogie lors des formations, le travail en équipe et une
-                        grande <strong>autonomie</strong> dans la gestion de mes tâches.
-                    </p>
-                    <div class="team-stats">
-                        <div class="stat"><span class="stat-number">2</span><span class="stat-label">Années de
-                                formation</span></div>
-                        <div class="stat"><span class="stat-number">15+</span><span class="stat-label">Technologies
-                                pratiquées</span></div>
-                        <div class="stat"><span class="stat-number">6+</span><span class="stat-label">Projets
-                                réalisés</span></div>
-                        <div class="stat"><span class="stat-number">50+</span><span class="stat-label">Infrastructures
-                                déployées</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mon entreprise : Infoconcept -->
-    <section class="about" id="entreprise">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text gsap-fade">
-                    <h2 class="gsap-reveal">Mon entreprise – Infoconcept</h2>
-                    <p>
-                        <strong>Infoconcept</strong>, fondée en 2009 et située au Mesnil-Amelot, est une société de
-                        services informatiques dédiée à l'accompagnement des <strong>PME, commerces, restaurants et
-                            grossistes</strong>. Avec un chiffre d'affaires de près d'un million d'euros en 2023, elle
-                        s'est imposée comme un acteur solide de son secteur.
-                    </p>
-                    <p>
-                        L'entreprise est spécialisée dans la distribution et l'intégration de solutions de gestion
-                        commerciale, notamment en tant que partenaire officiel du logiciel <strong>AKEAD</strong> depuis
-                        2014. Son offre couvre également la fourniture de matériel informatique (caisses, PC,
-                        réseau), de systèmes de <strong>vidéosurveillance Dahua</strong> et de consommables.
-                    </p>
-                    <div style="text-align: center; margin: 2rem 0;">
-                        <button id="toggle-entreprise-btn" class="cta-button magnetic-btn" onclick="toggleEntreprise()"
-                            style="padding: 0.8rem 2rem; font-size: 0.95rem; cursor: pointer;">
-                            En savoir plus sur le service IT
-                        </button>
-                    </div>
-
-                    <div id="entreprise-details" style="display: none; transition: all 0.5s ease;">
+        <!-- About Section (À propos de moi) -->
+        <section class="about" id="apropos">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text gsap-fade">
+                        <h2 class="gsap-reveal">À propos de moi</h2>
                         <p>
-                            Le <strong>service informatique</strong> d'Infoconcept joue un rôle central, non seulement
-                            dans le bon fonctionnement du matériel informatique des clients, mais aussi dans la gestion
-                            et
-                            l'optimisation de notre propre stock de matériel.
+                            Je m'appelle <strong>Kevin Ates</strong>, j'ai <strong>22 ans</strong> et je suis un
+                            étudiant
+                            en <strong>BTS SIO option SISR</strong> (Solutions d'Infrastructure, Systèmes et Réseaux).
+                            Depuis toujours attiré par la résolution de problèmes et la logique des systèmes
+                            informatiques, je me suis naturellement orienté vers l'administration des infrastructures
+                            pour
+                            construire et maintenir les fondations technologiques des entreprises.
                         </p>
                         <p>
-                            Nos missions principales au service informatique incluent :
+                            J'apprécie particulièrement la logique de l'administration des services comme <strong>Active
+                                Directory</strong>, la puissance de la segmentation réseau via les
+                            <strong>VLANs</strong>,
+                            et le défi de sécuriser un périmètre avec des pare-feux comme <strong>pfSense</strong>. La
+                            virtualisation (VMware, Hyper-V) est pour moi un terrain de jeu essentiel pour tester,
+                            apprendre
+                            et déployer des solutions sans risque.
                         </p>
-                        <ul style="list-style: disc; padding-left: 1.5rem; color: var(--gray); margin-bottom: 1.5rem;">
-                            <li><strong>Support utilisateurs :</strong> Assistance via TeamViewer pour le matériel
-                                (ordinateurs, caisses enregistreuses, consommables) et les logiciels (AKEAD, suite
-                                Microsoft
-                                Office ou Open Office, etc.).</li>
-                            <li><strong>Maintenance préventive :</strong> Contrôle régulier des postes informatiques du
-                                siège pour anticiper les défaillances matérielles ou logicielles, maintenir un niveau de
-                                sécurité optimal et vérifier le bon fonctionnement des équipements réseau.</li>
-                            <li><strong>Amélioration continue du parc informatique :</strong> Proposition et mise en
-                                place
-                                de solutions logicielles ou matérielles visant à améliorer la performance et la
-                                fiabilité de l'infrastructure.</li>
-                        </ul>
-                        <h4 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--dark);">Composition du parc
-                            informatique interne :</h4>
-                        <ul style="list-style: disc; padding-left: 1.5rem; color: var(--gray);">
-                            <li>8 ordinateurs (dont 4 dédiés au support client)</li>
-                            <li>4 téléphones professionnels pour la communication</li>
-                            <li>2 imprimantes</li>
-                            <li>1 serveur hébergeant les données clients</li>
-                            <li>1 switch réseau</li>
-                            <li>1 répéteur Wi-Fi</li>
-                            <li>1 poste d'atelier utilisé pour la récupération des données clients ou les tests de PC
-                            </li>
-                            <li>1 enregistreur Dahua pour les tests caméras</li>
-                        </ul>
+                        <p>
+                            Actuellement en alternance chez <strong>Infoconcept</strong>, je mets ces compétences en
+                            pratique au quotidien. Mon objectif est clair : obtenir mon BTS et poursuivre en
+                            <strong>Licence
+                                Professionnelle</strong> pour devenir un <strong>administrateur systèmes et
+                                réseaux</strong> polyvalent et fiable. Ce portfolio est le reflet de mon parcours, de
+                            mes
+                            projets et de ma détermination.
+                        </p>
                     </div>
+                    <div class="about-image image-reveal-container gsap-scale">
+                        <img src="unnamed.jpg" alt="Photo de profil de Kevin Ates" width="800" height="600"
+                            loading="lazy" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                    </div>
+                </div>
 
-                    <script>
-                        function toggleEntreprise() {
-                            var details = document.getElementById('entreprise-details');
-                            var btn = document.getElementById('toggle-entreprise-btn');
-
-                            if (details.style.display === "none") {
-                                details.style.display = "block";
-                                btn.textContent = "Réduire le texte";
-                            } else {
-                                details.style.display = "none";
-                                btn.textContent = "En savoir plus sur le service IT";
-                                // Optional: Scroll back to button if needed, but usually not necessary for short scrolls
-                            }
-                        }
-                    </script>
+                <!-- Profil détaillé intégré -->
+                <div class="team-content"
+                    style="margin-top: 5rem; max-width: 1000px; margin-left: auto; margin-right: auto;">
+                    <div class="team-image">
+                        <img src="logo-infoconcept.png" alt="Kevin Ates, Apprenti chez Infoconcept" width="250"
+                            height="250" loading="lazy"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                        <div class="team-social">
+                            <a href="https://www.linkedin.com/in/kevin-ates/" target="_blank" rel="noopener noreferrer"
+                                aria-label="LinkedIn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Mon rôle chez Infoconcept</h3>
+                        <p class="team-role">Apprenti Informatique – BTS SIO SISR</p>
+                        <p class="team-bio">
+                            En tant qu'apprenti, je suis pleinement intégré au service technique. Mes missions incluent
+                            le
+                            <strong>support aux utilisateurs</strong>, l'installation de postes de travail et de
+                            caisses, la
+                            configuration réseau et la mise en place de solutions de déploiement.
+                        </p>
+                        <p class="team-bio">
+                            Cette expérience m'a permis de développer des compétences humaines essentielles : le
+                            <strong>contact client</strong>, la pédagogie lors des formations, le travail en équipe et
+                            une
+                            grande <strong>autonomie</strong> dans la gestion de mes tâches.
+                        </p>
+                        <div class="team-stats">
+                            <div class="stat"><span class="stat-number">2</span><span class="stat-label">Années de
+                                    formation</span></div>
+                            <div class="stat"><span class="stat-number">15+</span><span class="stat-label">Technologies
+                                    pratiquées</span></div>
+                            <div class="stat"><span class="stat-number">6+</span><span class="stat-label">Projets
+                                    réalisés</span></div>
+                            <div class="stat"><span class="stat-number">50+</span><span
+                                    class="stat-label">Infrastructures
+                                    déployées</span></div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="org-chart-container">
-                <h3 class="org-title">Organigramme Infoconcept</h3>
-                <div class="tree">
-                    <ul>
-                        <li>
-                            <div class="node pdg">
-                                <strong>Président Directeur Général</strong>
-                                <p>Faruk MERMER</p>
-                            </div>
-                            <ul>
-                                <li>
-                                    <div class="node admin">
-                                        <strong>Assistante du PDG</strong>
-                                        <p>Emel SESLI</p>
-                                    </div>
+        <!-- Mon entreprise : Infoconcept -->
+        <section class="about" id="entreprise">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text gsap-fade">
+                        <h2 class="gsap-reveal">Mon entreprise – Infoconcept</h2>
+                        <p>
+                            <strong>Infoconcept</strong>, fondée en 2009 et située au Mesnil-Amelot, est une société de
+                            services informatiques dédiée à l'accompagnement des <strong>PME, commerces, restaurants et
+                                grossistes</strong>. Avec un chiffre d'affaires de près d'un million d'euros en 2023,
+                            elle
+                            s'est imposée comme un acteur solide de son secteur.
+                        </p>
+                        <p>
+                            L'entreprise est spécialisée dans la distribution et l'intégration de solutions de gestion
+                            commerciale, notamment en tant que partenaire officiel du logiciel <strong>AKEAD</strong>
+                            depuis
+                            2014. Son offre couvre également la fourniture de matériel informatique (caisses, PC,
+                            réseau), de systèmes de <strong>vidéosurveillance Dahua</strong> et de consommables.
+                        </p>
+                        <div style="text-align: center; margin: 2rem 0;">
+                            <button id="toggle-entreprise-btn" class="cta-button magnetic-btn"
+                                onclick="toggleEntreprise()"
+                                style="padding: 0.8rem 2rem; font-size: 0.95rem; cursor: pointer;">
+                                En savoir plus sur le service IT
+                            </button>
+                        </div>
+
+                        <div id="entreprise-details" style="display: none; transition: all 0.5s ease;">
+                            <p>
+                                Le <strong>service informatique</strong> d'Infoconcept joue un rôle central, non
+                                seulement
+                                dans le bon fonctionnement du matériel informatique des clients, mais aussi dans la
+                                gestion
+                                et
+                                l'optimisation de notre propre stock de matériel.
+                            </p>
+                            <p>
+                                Nos missions principales au service informatique incluent :
+                            </p>
+                            <ul
+                                style="list-style: disc; padding-left: 1.5rem; color: var(--gray); margin-bottom: 1.5rem;">
+                                <li><strong>Support utilisateurs :</strong> Assistance via TeamViewer pour le matériel
+                                    (ordinateurs, caisses enregistreuses, consommables) et les logiciels (AKEAD, suite
+                                    Microsoft
+                                    Office ou Open Office, etc.).</li>
+                                <li><strong>Maintenance préventive :</strong> Contrôle régulier des postes informatiques
+                                    du
+                                    siège pour anticiper les défaillances matérielles ou logicielles, maintenir un
+                                    niveau de
+                                    sécurité optimal et vérifier le bon fonctionnement des équipements réseau.</li>
+                                <li><strong>Amélioration continue du parc informatique :</strong> Proposition et mise en
+                                    place
+                                    de solutions logicielles ou matérielles visant à améliorer la performance et la
+                                    fiabilité de l'infrastructure.</li>
+                            </ul>
+                            <h4 style="margin-top: 2rem; margin-bottom: 1rem; color: var(--dark);">Composition du parc
+                                informatique interne :</h4>
+                            <ul style="list-style: disc; padding-left: 1.5rem; color: var(--gray);">
+                                <li>8 ordinateurs (dont 4 dédiés au support client)</li>
+                                <li>4 téléphones professionnels pour la communication</li>
+                                <li>2 imprimantes</li>
+                                <li>1 serveur hébergeant les données clients</li>
+                                <li>1 switch réseau</li>
+                                <li>1 répéteur Wi-Fi</li>
+                                <li>1 poste d'atelier utilisé pour la récupération des données clients ou les tests de
+                                    PC
                                 </li>
-                                <li>
-                                    <div class="node tech-lead">
-                                        <strong>Technicien Supérieur</strong>
-                                        <p>Cengiz KACAN</p>
+                                <li>1 enregistreur Dahua pour les tests caméras</li>
+                            </ul>
+                        </div>
+
+                        <script>
+                            function toggleEntreprise() {
+                                var details = document.getElementById('entreprise-details');
+                                var btn = document.getElementById('toggle-entreprise-btn');
+
+                                if (details.style.display === "none") {
+                                    details.style.display = "block";
+                                    btn.textContent = "Réduire le texte";
+                                } else {
+                                    details.style.display = "none";
+                                    btn.textContent = "En savoir plus sur le service IT";
+                                    // Optional: Scroll back to button if needed, but usually not necessary for short scrolls
+                                }
+                            }
+                        </script>
+                    </div>
+                </div>
+
+                <div class="org-chart-container">
+                    <h3 class="org-title">Organigramme Infoconcept</h3>
+                    <div class="tree">
+                        <ul>
+                            <li>
+                                <div class="node pdg">
+                                    <strong>Président Directeur Général</strong>
+                                    <p>Faruk MERMER</p>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <div class="node admin">
+                                            <strong>Assistante du PDG</strong>
+                                            <p>Emel SESLI</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="node tech-lead">
+                                            <strong>Technicien Supérieur</strong>
+                                            <p>Cengiz KACAN</p>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <div class="node tech">
+                                                    <strong>Pôle Technique</strong>
+                                                </div>
+                                                <ul>
+                                                    <li>
+                                                        <div class="node tech">
+                                                            <strong>Technicien Itinérant</strong>
+                                                            <p>Huseyin BEYAZ</p>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="node tech">
+                                                            <strong>Technicien Caméra</strong>
+                                                            <p>Chetananand M.</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <div class="node apprentice">
+                                                    <strong>Pôle Apprentissage</strong>
+                                                </div>
+                                                <ul>
+                                                    <li>
+                                                        <div class="node apprentice user-node">
+                                                            <strong>Apprenti Informatique</strong>
+                                                            <p>Kevin ATES</p>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="node apprentice">
+                                                            <strong>Apprenti Informatique</strong>
+                                                            <p>Selim MERMER</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mon Parcours -->
+        <section class="about" id="parcours">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-image image-reveal-container gsap-scale">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&fit=crop"
+                            alt="Parcours scolaire et professionnel" width="800" height="600" loading="lazy"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                    </div>
+                    <div class="about-text gsap-fade">
+                        <h2 class="gsap-reveal">Mon parcours</h2>
+                        <p>
+                            Mon parcours est un peu atypique et témoigne de ma capacité d'adaptation. Après l'obtention
+                            de mon <strong>baccalauréat en 2021</strong>, avec les spécialités Mathématiques et Sciences
+                            Économiques et Sociales, je me suis d'abord orienté vers des études en audiovisuel à l'ISA
+                            Paris.
+                        </p>
+                        <p>
+                            Face à la difficulté de trouver une alternance dans ce secteur, j'ai dû quitter l'école en
+                            décembre. J'ai alors saisi l'opportunité de travailler comme surveillant dans mon ancien
+                            lycée. C'est là que mon chemin a pris un tournant décisif.
+                        </p>
+                        <p>
+                            Le lycée m'a naturellement proposé un poste en <strong>maintenance informatique</strong>.
+                            Cette première expérience concrète m'a permis de découvrir une véritable passion pour la
+                            résolution de problèmes techniques et la gestion des infrastructures. C'est cette révélation
+                            qui a concrétisé mon envie de me professionnaliser dans ce domaine et m'a poussé à
+                            m'inscrire en <strong>BTS SIO</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projets (ex-portfolio) -->
+        <section class="portfolio" id="projets">
+            <div class="container">
+                <h2 class="gsap-reveal">Missions</h2>
+                <div class="project-filters">
+                    <button class="project-btn" onclick="filterProjects('entreprise', this)">Mission en
+                        entreprise</button>
+                    <button class="project-btn" onclick="filterProjects('formation', this)">Mission en
+                        formation</button>
+                </div>
+                <div id="entreprise-projects" class="project-group" style="display: none;">
+
+                    <h3 style="text-align:center; margin-top: 3rem; margin-bottom: 2rem; color: var(--dark);">Projets en
+                        entreprise</h3>
+                    <div class="portfolio-grid">
+                        <!-- Projet en entreprise 1 -->
+                        <div class="portfolio-item gsap-reveal">
+                            <div class="portfolio-image">
+                                <img src="https://images.unsplash.com/photo-1573167507387-6b3a86cb7c94?w=800&fit=crop"
+                                    alt="Installation de système de caisse" width="400" height="300" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-overlay-content">
+                                        <h4>Voir le projet</h4>
+                                        <p>Installation complète de caisses enregistreuses chez les clients.</p>
+                                        <a href="#" class="portfolio-link magnetic-btn">Voir la documentation</a>
                                     </div>
-                                    <ul>
-                                        <li>
-                                            <div class="node tech">
-                                                <strong>Pôle Technique</strong>
-                                            </div>
-                                            <ul>
-                                                <li>
-                                                    <div class="node tech">
-                                                        <strong>Technicien Itinérant</strong>
-                                                        <p>Huseyin BEYAZ</p>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="node tech">
-                                                        <strong>Technicien Caméra</strong>
-                                                        <p>Chetananand M.</p>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <div class="node apprentice">
-                                                <strong>Pôle Apprentissage</strong>
-                                            </div>
-                                            <ul>
-                                                <li>
-                                                    <div class="node apprentice user-node">
-                                                        <strong>Apprenti Informatique</strong>
-                                                        <p>Kevin ATES</p>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="node apprentice">
-                                                        <strong>Apprenti Informatique</strong>
-                                                        <p>Selim MERMER</p>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3>Installation de monoposte complet</h3>
+                                <p class="category">Projet en entreprise – Infoconcept</p>
+                                <p>
+                                    Déploiement sur site de solutions de caisse complètes, incluant le poste principal,
+                                    l'afficheur client, l'imprimante à tickets et la configuration du logiciel de
+                                    gestion
+                                    AKEAD.
+                                </p>
+                                <div class="portfolio-tags">
+                                    <span class="portfolio-tag">Matériel</span>
+                                    <span class="portfolio-tag">AKEAD</span>
+                                    <span class="portfolio-tag">Support client</span>
+                                    <span class="portfolio-tag">Réseau local</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Projet en entreprise 2 -->
+                        <div class="portfolio-item gsap-reveal">
+                            <div class="portfolio-image">
+                                <img src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=800&fit=crop"
+                                    alt="Déploiement d'images Windows" width="400" height="300" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-overlay-content">
+                                        <h4>Voir le projet</h4>
+                                        <p>Préparation de postes et de caisses avec Acronis True Image.</p>
+                                        <a href="#" class="portfolio-link magnetic-btn">Voir la documentation</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3>Déploiement d'images Windows via Acronis</h3>
+                                <p class="category">Projet en entreprise – Infoconcept</p>
+                                <p>
+                                    Création et déploiement d'images système standardisées avec Acronis pour préparer
+                                    les futurs postes et caisses, garantissant une configuration homogène et un gain de
+                                    temps majeur.
+                                </p>
+                                <div class="portfolio-tags">
+                                    <span class="portfolio-tag">Acronis</span>
+                                    <span class="portfolio-tag">Déploiement</span>
+                                    <span class="portfolio-tag">Windows</span>
+                                    <span class="portfolio-tag">Automatisation</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Projet en entreprise 3 -->
+                        <div class="portfolio-item gsap-reveal">
+                            <div class="portfolio-image">
+                                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&fit=crop"
+                                    alt="Configuration MySQL" width="400" height="300" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-overlay-content">
+                                        <h4>Voir le projet</h4>
+                                        <p>Configuration de base de données avec MySQL Administrator.</p>
+                                        <a href="COMPTE RENDU.pdf" class="portfolio-link magnetic-btn"
+                                            download>Télécharger le compte rendu</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3>Transfert de données AKEAD et MySQL</h3>
+                                <p class="category">Projet en entreprise – Infoconcept</p>
+                                <p>
+                                    Mise en place et configuration de bases de données MySQL pour les logiciels de
+                                    gestion.
+                                    Utilisation de MySQL Administrator pour la gestion des utilisateurs et des
+                                    permissions
+                                    de base.
+                                </p>
+                                <div class="portfolio-tags">
+                                    <span class="portfolio-tag">MySQL</span>
+                                    <span class="portfolio-tag">Base de données</span>
+                                    <span class="portfolio-tag">AKEAD</span>
+                                    <span class="portfolio-tag">SQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="formation-projects" class="project-group" style="display: none;">
+                    <h3 style="text-align:center; margin-top: 4rem; margin-bottom: 2rem; color: var(--dark);">Projets
+                        scolaires</h3>
+                    <div class="portfolio-grid">
+                        <!-- Projet école 1 -->
+                        <div class="portfolio-item gsap-reveal">
+                            <div class="portfolio-image">
+                                <img src="https://images.unsplash.com/photo-1580106815433-a5b1d1d53d85?w=800&fit=crop"
+                                    alt="Active Directory & services réseau" width="400" height="300" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-overlay-content">
+                                        <h4>Voir le projet</h4>
+                                        <p>Gestion des utilisateurs et des postes via GPO et scripts.</p>
+                                        <a href="Compte rendu - AD-GPO-SF.pdf" class="portfolio-link magnetic-btn"
+                                            download>Télécharger
+                                            le dossier</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3>Active Directory : GPO & Scripts</h3>
+                                <p class="category">Projet Scolaire (SISR)</p>
+                                <p>
+                                    Déploiement d'un domaine AD, configuration de GPO pour standardiser les fonds
+                                    d'écran
+                                    et création de scripts (menu.bat, PowerShell) pour automatiser l'ajout
+                                    d'utilisateurs.
+                                </p>
+                                <div class="portfolio-tags">
+                                    <span class="portfolio-tag">Windows Server</span>
+                                    <span class="portfolio-tag">AD DS</span>
+                                    <span class="portfolio-tag">GPO</span>
+                                    <span class="portfolio-tag">Scripting</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Projet école 2 -->
+                        <div class="portfolio-item gsap-reveal">
+                            <div class="portfolio-image">
+                                <img src="https://images.unsplash.com/photo-1691435828932-911a7801adfb?w=800&fit=crop"
+                                    alt="Transfert de rôles FSMO" width="400" height="300" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-overlay-content">
+                                        <h4>Voir le projet</h4>
+                                        <p>Migration d'un contrôleur de domaine et transfert des rôles FSMO.</p>
+                                        <a href="KA Compte Rendu FSMO.pdf" class="portfolio-link magnetic-btn"
+                                            download>Télécharger le
+                                            dossier</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3>Transfert de rôles FSMO</h3>
+                                <p class="category">Projet Scolaire (SISR)</p>
+                                <p>
+                                    Mise à niveau d'une infrastructure en migrant un contrôleur de domaine vers une
+                                    version plus récente de Windows Server, incluant le transfert sécurisé des 5 rôles
+                                    FSMO.
+                                </p>
+                                <div class="portfolio-tags">
+                                    <span class="portfolio-tag">Windows Server</span>
+                                    <span class="portfolio-tag">FSMO</span>
+                                    <span class="portfolio-tag">Migration</span>
+                                    <span class="portfolio-tag">Active Directory</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Projet école 3 (Pfsense) -->
+                        <div class="portfolio-item gsap-reveal">
+                            <div class="portfolio-image">
+                                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&fit=crop"
+                                    alt="Haute Disponibilité Pfsense" width="400" height="300" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-overlay-content">
+                                        <h4>Voir le projet</h4>
+                                        <p>Mise en place de haute disponibilité avec Pfsense (CARP).</p>
+                                        <a href="Compte Rendu - HD Pfsense .pdf" class="portfolio-link magnetic-btn"
+                                            download>Télécharger
+                                            le dossier</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3>Haute Disponibilité Pfsense</h3>
+                                <p class="category">Projet Scolaire (SISR)</p>
+                                <p>
+                                    Installation et configuration de pare-feu Pfsense en cluster pour assurer la haute
+                                    disponibilité des services réseau et la redondance de la passerelle.
+                                </p>
+                                <div class="portfolio-tags">
+                                    <span class="portfolio-tag">Pfsense</span>
+                                    <span class="portfolio-tag">Haute Disponibilité</span>
+                                    <span class="portfolio-tag">Pare-feu</span>
+                                    <span class="portfolio-tag">Réseau</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Veille technologique -->
+        <section class="services" id="veille">
+            <div class="container veille">
+                <h2 style="text-align: center;">Veille Technologique : IA & Infrastructures</h2>
+                <p class="subtitle gsap-reveal stagger-1"
+                    style="text-align: center; margin-bottom: 2rem; color: var(--primary); font-weight: 500;">
+                    L'impact de l'Intelligence Artificielle sur la sécurité et l'automatisation des Systèmes
+                    d'Information.
+                </p>
+
+
+
+                <div class="methodologie-section">
+                    <h3>Ma Stack de Veille</h3>
+                    <p class="methodo-intro">"Pour garantir une information fiable et filtrée, j'ai mis en place un
+                        cycle de
+                        veille automatisé :"</p>
+
+                    <div class="methodologie-grid">
+                        <div class="method-item">
+                            <span class="method-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M4 11a9 9 0 0 1 9 9"></path>
+                                    <path d="M4 4a16 16 0 0 1 16 16"></path>
+                                    <circle cx="5" cy="19" r="1"></circle>
+                                </svg>
+                            </span>
+                            <div class="method-content">
+                                <strong>Sourcing</strong>
+                                <p>Agrégation de flux RSS via Feedly (Sources : ANSSI, The Hacker News, LeMagIT, OpenAI
+                                    Research).</p>
+                            </div>
+                        </div>
+                        <div class="method-item">
+                            <span class="method-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                            </span>
+                            <div class="method-content">
+                                <strong>Analyse</strong>
+                                <p>Synthèse et qualification des menaces sur Notion.</p>
+                            </div>
+                        </div>
+                        <div class="method-item">
+                            <span class="method-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="18" cy="5" r="3"></circle>
+                                    <circle cx="6" cy="12" r="3"></circle>
+                                    <circle cx="18" cy="19" r="3"></circle>
+                                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                                </svg>
+                            </span>
+                            <div class="method-content">
+                                <strong>Diffusion</strong>
+                                <p>Publication des analyses critiques sur ce portfolio.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <article class="card-featured">
+                    <div class="card-header">
+                        <div class="header-content">
+                            <h3>Le Problème de l'Alignement : Quand l'automatisation devient une menace.</h3>
+                            <span class="date">12 Octobre 2024 — Basé sur l'analyse de la chaîne Ego (YouTube) et les
+                                travaux de Nick Bostrom.</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-section">
+                            <h4>L'Exemple de l'Araignée Sauteuse</h4>
+                            <p>"L'alignement désigne la difficulté de forcer une IA à respecter l'intention humaine
+                                plutôt
+                                que la lettre exacte de son code. L'exemple de l'araignée sauteuse l'illustre
+                                parfaitement :
+                                une IA contrôle une araignée virtuelle située sous une ligne noire. On lui demande
+                                d'apprendre à sauter pour que ses pattes passent au-dessus de la ligne. L'IA apprend
+                                d'abord
+                                à sauter, puis développe une technique inattendue (elle trouve un 'bug physique') : elle
+                                fait la roue. Ses pattes restent ainsi constamment au-dessus de la ligne. Elle fait
+                                exactement ce qu'on lui a demandé mathématiquement, mais pas de la manière désirée.
+                                C'est le
+                                cœur du problème de l'alignement."</p>
+                        </div>
+
+                        <div class="analysis-box">
+                            <h4>Mon Analyse SISR</h4>
+                            <p class="analysis-intro">"Ce concept théorique a un impact direct sur l'administration
+                                système
+                                moderne :"</p>
+                            <ul>
+                                <li><strong>Danger du Scripting Autonome :</strong> Un agent IA chargé de 'libérer de
+                                    l'espace disque' pourrait supprimer des fichiers critiques s'il n'est pas contraint
+                                    (Hard Constraints).</li>
+                                <li><strong>Sécurité Zero Trust :</strong> L'IA fonctionnant souvent comme une 'Boîte
+                                    Noire', nous ne pouvons pas lui faire confiance par défaut. Il est impératif de
+                                    cloisonner (Sandbox) les outils d'IA pour protéger l'infrastructure de production."
                                 </li>
                             </ul>
-                        </li>
-                    </ul>
+                        </div>
+
+                        <div class="card-actions">
+                            <a href="https://youtu.be/ZP7T6WAK3Ow" target="_blank" class="source-link">Voir la
+                                source</a>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="see-more">
+                    <a href="https://dazzling-oriole-017.notion.site/Veille-Technologique-BTS-SIO-2e848f26c66280d6b692cafa0bf4111c?source=copy_link"
+                        target="_blank" class="cta-button magnetic-btn">Accéder à mon journal de veille complet
+                        (Notion)</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Mon Parcours -->
-    <section class="about" id="parcours">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-image image-reveal-container gsap-scale">
-                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&fit=crop"
-                        alt="Parcours scolaire et professionnel" width="800" height="600" loading="lazy"
-                        style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
-                </div>
-                <div class="about-text gsap-fade">
-                    <h2 class="gsap-reveal">Mon parcours</h2>
-                    <p>
-                        Mon parcours est un peu atypique et témoigne de ma capacité d'adaptation. Après l'obtention
-                        de mon <strong>baccalauréat en 2021</strong>, avec les spécialités Mathématiques et Sciences
-                        Économiques et Sociales, je me suis d'abord orienté vers des études en audiovisuel à l'ISA
-                        Paris.
-                    </p>
-                    <p>
-                        Face à la difficulté de trouver une alternance dans ce secteur, j'ai dû quitter l'école en
-                        décembre. J'ai alors saisi l'opportunité de travailler comme surveillant dans mon ancien
-                        lycée. C'est là que mon chemin a pris un tournant décisif.
-                    </p>
-                    <p>
-                        Le lycée m'a naturellement proposé un poste en <strong>maintenance informatique</strong>.
-                        Cette première expérience concrète m'a permis de découvrir une véritable passion pour la
-                        résolution de problèmes techniques et la gestion des infrastructures. C'est cette révélation
-                        qui a concrétisé mon envie de me professionnaliser dans ce domaine et m'a poussé à
-                        m'inscrire en <strong>BTS SIO</strong>.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projets (ex-portfolio) -->
-    <section class="portfolio" id="projets">
-        <div class="container">
-            <h2 class="gsap-reveal">Missions</h2>
-            <div class="project-filters">
-                <button class="project-btn" onclick="filterProjects('entreprise', this)">Mission en entreprise</button>
-                <button class="project-btn" onclick="filterProjects('formation', this)">Mission en formation</button>
-            </div>
-            <div id="entreprise-projects" class="project-group" style="display: none;">
-
-                <h3 style="text-align:center; margin-top: 3rem; margin-bottom: 2rem; color: var(--dark);">Projets en
-                    entreprise</h3>
-                <div class="portfolio-grid">
-                    <!-- Projet en entreprise 1 -->
-                    <div class="portfolio-item gsap-reveal">
-                        <div class="portfolio-image">
-                            <img src="https://images.unsplash.com/photo-1573167507387-6b3a86cb7c94?w=800&fit=crop"
-                                alt="Installation de système de caisse" width="400" height="300" loading="lazy">
-                            <div class="portfolio-overlay">
-                                <div class="portfolio-overlay-content">
-                                    <h4>Voir le projet</h4>
-                                    <p>Installation complète de caisses enregistreuses chez les clients.</p>
-                                    <a href="#" class="portfolio-link magnetic-btn">Voir la documentation</a>
+        <!-- Projet Personnel -->
+        <section class="about personal-project" id="projet-perso">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 3rem; color: var(--primary);">Projets Personnels</h2>
+                <div class="personal-projects-list">
+                    <!-- Project 1: Site Vitrine -->
+                    <div class="project-card gsap-reveal">
+                        <div class="project-visual">
+                            <img src="interieur-moderne.jpg"
+                                alt="Aper&amp;ccedil;u d'un int&amp;eacute;rieur moderne pour le site vitrine"
+                                width="900" height="650" loading="lazy">
+                            <div class="project-badge">Site vitrine &middot; Client r&eacute;el</div>
+                            <div class="project-link">
+                                <a href="https://purpleecosage.github.io/mon-site-patisserie/" target="_blank"
+                                    rel="noopener noreferrer" class="cta-button magnetic-btn">Voir en ligne</a>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <h3>Site vitrine pour une p&acirc;tisserie</h3>
+                            <p>Cr&eacute;ation d'une pr&eacute;sence en ligne moderne et responsive pour un artisan.
+                                L'objectif
+                                : mettre en valeur les produits, donner envie de passer commande et rassurer avec des
+                                infos
+                                pratiques.</p>
+                            <div class="project-pills">
+                                <span>HTML5/CSS3</span>
+                                <span>JavaScript</span>
+                                <span>Responsive Design</span>
+                                <span>SEO</span>
+                            </div>
+                            <div class="project-highlights">
+                                <div>
+                                    <strong>UX claire</strong>
+                                    <p>Parcours simple avec CTA visibles.</p>
+                                </div>
+                                <div>
+                                    <strong>Performance</strong>
+                                    <p>Optimisation des temps de chargement.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="portfolio-info">
-                            <h3>Installation de système de caisse complet</h3>
-                            <p class="category">Projet en entreprise – Infoconcept</p>
-                            <p>
-                                Déploiement sur site de solutions de caisse complètes, incluant le poste principal,
-                                l'afficheur client, l'imprimante à tickets et la configuration du logiciel de gestion
-                                AKEAD.
-                            </p>
-                            <div class="portfolio-tags">
-                                <span class="portfolio-tag">Matériel</span>
-                                <span class="portfolio-tag">AKEAD</span>
-                                <span class="portfolio-tag">Support client</span>
-                                <span class="portfolio-tag">Réseau local</span>
-                            </div>
-                        </div>
                     </div>
 
-                    <!-- Projet en entreprise 2 -->
-                    <div class="portfolio-item gsap-reveal">
-                        <div class="portfolio-image">
-                            <img src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=800&fit=crop"
-                                alt="Déploiement d'images Windows" width="400" height="300" loading="lazy">
-                            <div class="portfolio-overlay">
-                                <div class="portfolio-overlay-content">
-                                    <h4>Voir le projet</h4>
-                                    <p>Préparation de postes et de caisses avec Acronis True Image.</p>
-                                    <a href="#" class="portfolio-link magnetic-btn">Voir la documentation</a>
+                    <!-- Project 2: AURA -->
+                    <div class="project-card gsap-reveal">
+                        <div class="project-visual">
+                            <img src="fond.png" alt="Aperçu du projet AURA" width="900" height="650" loading="lazy">
+                            <div class="project-badge">Expérience Web &middot; 3D / Design</div>
+                            <div class="project-link">
+                                <a href="https://purpleecosage.github.io/AURA/" target="_blank"
+                                    rel="noopener noreferrer" class="cta-button magnetic-btn">Découvrir l'expérience</a>
+                            </div>
+                        </div>
+                        <div class="project-details">
+                            <h3>AURA - Immersion Numérique</h3>
+                            <p>Une expérience web interactive explorant des concepts visuels et sonores.</p>
+                            <div class="project-pills">
+                                <span>WebGL</span>
+                                <span>Creative Coding</span>
+                                <span>Interaction Design</span>
+                            </div>
+                            <div class="project-highlights">
+                                <div>
+                                    <strong>Immersion</strong>
+                                    <p>Atmosphère visuelle unique.</p>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>Déploiement d'images Windows via Acronis</h3>
-                            <p class="category">Projet en entreprise – Infoconcept</p>
-                            <p>
-                                Création et déploiement d'images système standardisées avec Acronis pour préparer
-                                les futurs postes et caisses, garantissant une configuration homogène et un gain de
-                                temps majeur.
-                            </p>
-                            <div class="portfolio-tags">
-                                <span class="portfolio-tag">Acronis</span>
-                                <span class="portfolio-tag">Déploiement</span>
-                                <span class="portfolio-tag">Windows</span>
-                                <span class="portfolio-tag">Automatisation</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Projet en entreprise 3 -->
-                    <div class="portfolio-item gsap-reveal">
-                        <div class="portfolio-image">
-                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&fit=crop"
-                                alt="Configuration MySQL" width="400" height="300" loading="lazy">
-                            <div class="portfolio-overlay">
-                                <div class="portfolio-overlay-content">
-                                    <h4>Voir le projet</h4>
-                                    <p>Configuration de base de données avec MySQL Administrator.</p>
-                                    <a href="#" class="portfolio-link magnetic-btn">Voir la documentation</a>
+                                <div>
+                                    <strong>Innovation</strong>
+                                    <p>Utilisation créative des technologies web.</p>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>Configuration de base de données MySQL</h3>
-                            <p class="category">Projet en entreprise – Infoconcept</p>
-                            <p>
-                                Mise en place et configuration de bases de données MySQL pour les logiciels de gestion.
-                                Utilisation de MySQL Administrator pour la gestion des utilisateurs et des permissions
-                                de base.
-                            </p>
-                            <div class="portfolio-tags">
-                                <span class="portfolio-tag">MySQL</span>
-                                <span class="portfolio-tag">Base de données</span>
-                                <span class="portfolio-tag">AKEAD</span>
-                                <span class="portfolio-tag">SQL</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div id="formation-projects" class="project-group" style="display: none;">
-                <h3 style="text-align:center; margin-top: 4rem; margin-bottom: 2rem; color: var(--dark);">Projets
-                    scolaires</h3>
-                <div class="portfolio-grid">
-                    <!-- Projet école 1 -->
-                    <div class="portfolio-item gsap-reveal">
-                        <div class="portfolio-image">
-                            <img src="https://images.unsplash.com/photo-1580106815433-a5b1d1d53d85?w=800&fit=crop"
-                                alt="Active Directory & services réseau" width="400" height="300" loading="lazy">
-                            <div class="portfolio-overlay">
-                                <div class="portfolio-overlay-content">
-                                    <h4>Voir le projet</h4>
-                                    <p>Gestion des utilisateurs et des postes via GPO et scripts.</p>
-                                    <a href="Compte rendu - AD-GPO-SF.pdf" class="portfolio-link magnetic-btn"
-                                        download>Télécharger
-                                        le dossier</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>Active Directory : GPO & Scripts</h3>
-                            <p class="category">Projet Scolaire (SISR)</p>
-                            <p>
-                                Déploiement d'un domaine AD, configuration de GPO pour standardiser les fonds d'écran
-                                et création de scripts (menu.bat, PowerShell) pour automatiser l'ajout d'utilisateurs.
-                            </p>
-                            <div class="portfolio-tags">
-                                <span class="portfolio-tag">Windows Server</span>
-                                <span class="portfolio-tag">AD DS</span>
-                                <span class="portfolio-tag">GPO</span>
-                                <span class="portfolio-tag">Scripting</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Projet école 2 -->
-                    <div class="portfolio-item gsap-reveal">
-                        <div class="portfolio-image">
-                            <img src="https://images.unsplash.com/photo-1691435828932-911a7801adfb?w=800&fit=crop"
-                                alt="Transfert de rôles FSMO" width="400" height="300" loading="lazy">
-                            <div class="portfolio-overlay">
-                                <div class="portfolio-overlay-content">
-                                    <h4>Voir le projet</h4>
-                                    <p>Migration d'un contrôleur de domaine et transfert des rôles FSMO.</p>
-                                    <a href="KA Compte Rendu FSMO.pdf" class="portfolio-link magnetic-btn"
-                                        download>Télécharger le
-                                        dossier</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>Transfert de rôles FSMO</h3>
-                            <p class="category">Projet Scolaire (SISR)</p>
-                            <p>
-                                Mise à niveau d'une infrastructure en migrant un contrôleur de domaine vers une
-                                version plus récente de Windows Server, incluant le transfert sécurisé des 5 rôles
-                                FSMO.
-                            </p>
-                            <div class="portfolio-tags">
-                                <span class="portfolio-tag">Windows Server</span>
-                                <span class="portfolio-tag">FSMO</span>
-                                <span class="portfolio-tag">Migration</span>
-                                <span class="portfolio-tag">Active Directory</span>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <!-- Projet école 3 (Pfsense) -->
-                    <div class="portfolio-item gsap-reveal">
-                        <div class="portfolio-image">
-                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&fit=crop"
-                                alt="Haute Disponibilité Pfsense" width="400" height="300" loading="lazy">
-                            <div class="portfolio-overlay">
-                                <div class="portfolio-overlay-content">
-                                    <h4>Voir le projet</h4>
-                                    <p>Mise en place de haute disponibilité avec Pfsense (CARP).</p>
-                                    <a href="Compte Rendu - HD Pfsense .pdf" class="portfolio-link magnetic-btn"
-                                        download>Télécharger
-                                        le dossier</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>Haute Disponibilité Pfsense</h3>
-                            <p class="category">Projet Scolaire (SISR)</p>
-                            <p>
-                                Installation et configuration de pare-feu Pfsense en cluster pour assurer la haute
-                                disponibilité des services réseau et la redondance de la passerelle.
-                            </p>
-                            <div class="portfolio-tags">
-                                <span class="portfolio-tag">Pfsense</span>
-                                <span class="portfolio-tag">Haute Disponibilité</span>
-                                <span class="portfolio-tag">Pare-feu</span>
-                                <span class="portfolio-tag">Réseau</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-    </section>
+        </section>
 
-    </div>
-    <!-- Veille technologique -->
-    <section class="services" id="veille">
-        <div class="container veille">
-            <h2 style="text-align: center;">Veille Technologique : IA & Infrastructures</h2>
-            <p class="subtitle gsap-reveal stagger-1"
-                style="text-align: center; margin-bottom: 2rem; color: var(--primary); font-weight: 500;">
-                L'impact de l'Intelligence Artificielle sur la sécurité et l'automatisation des Systèmes d'Information.
-            </p>
-
-            <div class="veille-intro">
-                "En tant que futur administrateur SISR, ma veille ne se limite pas aux nouvelles versions logicielles.
-                Je surveille les changements structurels que l'IA impose à nos métiers : des nouvelles menaces (IA
-                offensives) aux risques liés à l'automatisation sans supervision (problème de l'alignement)."
-            </div>
-
-            <div class="methodologie-section">
-                <h3>Ma Stack de Veille</h3>
-                <p class="methodo-intro">"Pour garantir une information fiable et filtrée, j'ai mis en place un cycle de
-                    veille automatisé :"</p>
-
-                <div class="methodologie-grid">
-                    <div class="method-item">
-                        <span class="method-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M4 11a9 9 0 0 1 9 9"></path>
-                                <path d="M4 4a16 16 0 0 1 16 16"></path>
-                                <circle cx="5" cy="19" r="1"></circle>
-                            </svg>
-                        </span>
-                        <div class="method-content">
-                            <strong>Sourcing</strong>
-                            <p>Agrégation de flux RSS via Feedly (Sources : ANSSI, The Hacker News, LeMagIT, OpenAI
-                                Research).</p>
-                        </div>
-                    </div>
-                    <div class="method-item">
-                        <span class="method-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                            </svg>
-                        </span>
-                        <div class="method-content">
-                            <strong>Analyse</strong>
-                            <p>Synthèse et qualification des menaces sur Notion.</p>
-                        </div>
-                    </div>
-                    <div class="method-item">
-                        <span class="method-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <circle cx="18" cy="5" r="3"></circle>
-                                <circle cx="6" cy="12" r="3"></circle>
-                                <circle cx="18" cy="19" r="3"></circle>
-                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-                                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-                            </svg>
-                        </span>
-                        <div class="method-content">
-                            <strong>Diffusion</strong>
-                            <p>Publication des analyses critiques sur ce portfolio.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <article class="card-featured">
-                <div class="card-header">
-                    <div class="header-content">
-                        <h3>Le Problème de l'Alignement : Quand l'automatisation devient une menace.</h3>
-                        <span class="date">12 Octobre 2024 — Basé sur l'analyse de la chaîne Ego (YouTube) et les
-                            travaux de Nick Bostrom.</span>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <div class="card-section">
-                        <h4>L'Exemple de l'Araignée Sauteuse</h4>
-                        <p>"L'alignement désigne la difficulté de forcer une IA à respecter l'intention humaine plutôt
-                            que la lettre exacte de son code. L'exemple de l'araignée sauteuse l'illustre parfaitement :
-                            une IA contrôle une araignée virtuelle située sous une ligne noire. On lui demande
-                            d'apprendre à sauter pour que ses pattes passent au-dessus de la ligne. L'IA apprend d'abord
-                            à sauter, puis développe une technique inattendue (elle trouve un 'bug physique') : elle
-                            fait la roue. Ses pattes restent ainsi constamment au-dessus de la ligne. Elle fait
-                            exactement ce qu'on lui a demandé mathématiquement, mais pas de la manière désirée. C'est le
-                            cœur du problème de l'alignement."</p>
-                    </div>
-
-                    <div class="analysis-box">
-                        <h4>Mon Analyse SISR</h4>
-                        <p class="analysis-intro">"Ce concept théorique a un impact direct sur l'administration système
-                            moderne :"</p>
-                        <ul>
-                            <li><strong>Danger du Scripting Autonome :</strong> Un agent IA chargé de 'libérer de
-                                l'espace disque' pourrait supprimer des fichiers critiques s'il n'est pas contraint
-                                (Hard Constraints).</li>
-                            <li><strong>Sécurité Zero Trust :</strong> L'IA fonctionnant souvent comme une 'Boîte
-                                Noire', nous ne pouvons pas lui faire confiance par défaut. Il est impératif de
-                                cloisonner (Sandbox) les outils d'IA pour protéger l'infrastructure de production."</li>
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="gsap-reveal">Contact & informations</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Me contacter</h3>
+                        <p>
+                            Vous êtes <strong>membre du jury</strong>, <strong>recruteur</strong> ou simplement curieux
+                            de
+                            mon profil ? N'hésitez pas à me contacter pour toute question, opportunité d'alternance ou
+                            d'emploi.
+                        </p>
+                        <ul class="contact-details">
+                            <li>
+                                <i>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A31621"
+                                        stroke-width="2">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                        </path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </i>
+                                kevinonurates@gmail.com
+                            </li>
+                            <li>
+                                <i>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A31621"
+                                        stroke-width="2">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81 0.7A2 2 0 0 1 22 16.92z">
+                                        </path>
+                                    </svg>
+                                </i>
+                                07 66 56 12 93
+                            </li>
+                            <li>
+                                <i>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A31621"
+                                        stroke-width="2">
+                                        <path d="M16 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"></path>
+                                        <path d="M12 14c-4.418 0-8 1.79-8 4v2h16v-2c0-2.21-3.582-4-8-4z"></path>
+                                    </svg>
+                                </i>
+                                <a href="https://www.linkedin.com/in/kevin-ates/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    Mon profil LinkedIn
+                                </a>
+                            </li>
                         </ul>
                     </div>
-
-                    <div class="card-actions">
-                        <a href="https://youtu.be/ZP7T6WAK3Ow" target="_blank" class="source-link">Voir la source</a>
-                    </div>
-                </div>
-            </article>
-
-            <div class="see-more">
-                <a href="https://dazzling-oriole-017.notion.site/Veille-Technologique-BTS-SIO-2e848f26c66280d6b692cafa0bf4111c?source=copy_link"
-                    target="_blank" class="cta-button magnetic-btn">Accéder à mon journal de veille complet (Notion)</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projet Personnel -->
-    <section class="about personal-project" id="projet-perso">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 3rem; color: var(--primary);">Projets Personnels</h2>
-            <div class="personal-projects-list">
-                <!-- Project 1: Site Vitrine -->
-                <div class="project-card gsap-reveal">
-                    <div class="project-visual">
-                        <img src="interieur-moderne.jpg"
-                            alt="Aper&amp;ccedil;u d'un int&amp;eacute;rieur moderne pour le site vitrine" width="900"
-                            height="650" loading="lazy">
-                        <div class="project-badge">Site vitrine &middot; Client r&eacute;el</div>
-                        <div class="project-link">
-                            <a href="https://purpleecosage.github.io/mon-site-patisserie/" target="_blank"
-                                rel="noopener noreferrer" class="cta-button magnetic-btn">Voir en ligne</a>
-                        </div>
-                    </div>
-                    <div class="project-details">
-                        <h3>Site vitrine pour une p&acirc;tisserie</h3>
-                        <p>Cr&eacute;ation d'une pr&eacute;sence en ligne moderne et responsive pour un artisan.
-                            L'objectif
-                            : mettre en valeur les produits, donner envie de passer commande et rassurer avec des infos
-                            pratiques.</p>
-                        <div class="project-pills">
-                            <span>HTML5/CSS3</span>
-                            <span>JavaScript</span>
-                            <span>Responsive Design</span>
-                            <span>SEO</span>
-                        </div>
-                        <div class="project-highlights">
-                            <div>
-                                <strong>UX claire</strong>
-                                <p>Parcours simple avec CTA visibles.</p>
+                    <div class="contact-form">
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Nom</label>
+                                <input type="text" id="name" name="name" required>
                             </div>
-                            <div>
-                                <strong>Performance</strong>
-                                <p>Optimisation des temps de chargement.</p>
+                            <div class="form-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" required>
                             </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2: AURA -->
-                <div class="project-card gsap-reveal">
-                    <div class="project-visual">
-                        <img src="fond.png" alt="Aperçu du projet AURA" width="900" height="650" loading="lazy">
-                        <div class="project-badge">Expérience Web &middot; 3D / Design</div>
-                        <div class="project-link">
-                            <a href="https://purpleecosage.github.io/AURA/" target="_blank" rel="noopener noreferrer"
-                                class="cta-button magnetic-btn">Découvrir l'expérience</a>
-                        </div>
-                    </div>
-                    <div class="project-details">
-                        <h3>AURA - Immersion Numérique</h3>
-                        <p>Une expérience web interactive explorant des concepts visuels et sonores.</p>
-                        <div class="project-pills">
-                            <span>WebGL</span>
-                            <span>Creative Coding</span>
-                            <span>Interaction Design</span>
-                        </div>
-                        <div class="project-highlights">
-                            <div>
-                                <strong>Immersion</strong>
-                                <p>Atmosphère visuelle unique.</p>
+                            <div class="form-group">
+                                <label for="phone">Téléphone</label>
+                                <input type="tel" id="phone" name="phone">
                             </div>
-                            <div>
-                                <strong>Innovation</strong>
-                                <p>Utilisation créative des technologies web.</p>
+                            <div class="form-group">
+                                <label for="message">Votre message</label>
+                                <textarea id="message" name="message" required></textarea>
                             </div>
-                        </div>
+                            <button type="submit" class="submit-btn">Envoyer</button>
+                        </form>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="gsap-reveal">Contact & informations</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Me contacter</h3>
-                    <p>
-                        Vous êtes <strong>membre du jury</strong>, <strong>recruteur</strong> ou simplement curieux de
-                        mon profil ? N'hésitez pas à me contacter pour toute question, opportunité d'alternance ou
-                        d'emploi.
-                    </p>
-                    <ul class="contact-details">
-                        <li>
-                            <i>
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A31621"
-                                    stroke-width="2">
-                                    <path
-                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                                    </path>
-                                    <polyline points="22,6 12,13 2,6"></polyline>
-                                </svg>
-                            </i>
-                            kevinonurates@gmail.com
-                        </li>
-                        <li>
-                            <i>
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A31621"
-                                    stroke-width="2">
-                                    <path
-                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81 0.7A2 2 0 0 1 22 16.92z">
-                                    </path>
-                                </svg>
-                            </i>
-                            07 66 56 12 93
-                        </li>
-                        <li>
-                            <i>
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A31621"
-                                    stroke-width="2">
-                                    <path d="M16 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"></path>
-                                    <path d="M12 14c-4.418 0-8 1.79-8 4v2h16v-2c0-2.21-3.582-4-8-4z"></path>
-                                </svg>
-                            </i>
-                            <a href="https://www.linkedin.com/in/kevin-ates/" target="_blank" rel="noopener noreferrer">
-                                Mon profil LinkedIn
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="contact-form">
-                    <form id="contact-form">
-                        <div class="form-group">
-                            <label for="name">Nom</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Téléphone</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Votre message</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Envoyer</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -1012,33 +1057,10 @@
             });
         }
 
-        // ----------------------------------------------------
-        // ADD CDN LIBRARIES
-        // ----------------------------------------------------
-        const gsapScript = document.createElement('script');
-        gsapScript.src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js";
-        document.body.appendChild(gsapScript);
-
-        const ScrollTriggerScript = document.createElement('script');
-        ScrollTriggerScript.src = "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js";
-        document.body.appendChild(ScrollTriggerScript);
-
-        const lenisScript = document.createElement('script');
-        lenisScript.src = "https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js";
-        document.body.appendChild(lenisScript);
-
-        // Wait for scripts to load before initializing animations
-        let scriptsLoaded = 0;
-        const initScripts = () => {
-            scriptsLoaded++;
-            if (scriptsLoaded === 3) {
-                initAnimations();
-            }
-        };
-
-        gsapScript.onload = initScripts;
-        ScrollTriggerScript.onload = initScripts;
-        lenisScript.onload = initScripts;
+        // Initialiser les animations une fois que le DOM est chargé y compris les scripts defer
+        document.addEventListener("DOMContentLoaded", function () {
+            initAnimations();
+        });
 
         function initAnimations() {
             // ----------------------------------------------------
@@ -1129,8 +1151,8 @@
             magneticBtns.forEach(btn => {
                 btn.addEventListener('mousemove', function (e) {
                     const position = btn.getBoundingClientRect();
-                    const x = e.pageX - position.left - position.width / 2;
-                    const y = e.pageY - position.top - position.height / 2;
+                    const x = e.clientX - position.left - position.width / 2;
+                    const y = e.clientY - position.top - position.height / 2;
 
                     gsap.to(btn, {
                         x: x * 0.3,
@@ -1162,24 +1184,72 @@
         }
     </script>
     <script>
+        let isFiltering = false;
+
         function filterProjects(categoryId, btn) {
-            document.querySelectorAll('.project-group').forEach(group => {
-                group.style.display = 'none';
-            });
+            if (isFiltering) return;
+
             const targetGroup = document.getElementById(categoryId + '-projects');
-            if (targetGroup) {
-                targetGroup.style.display = 'block';
+            if (targetGroup && targetGroup.style.display === 'block' && targetGroup.classList.contains('active-group')) {
+                return;
             }
+
             document.querySelectorAll('.project-btn').forEach(b => {
                 b.classList.remove('active');
             });
             if (btn) {
                 btn.classList.add('active');
             }
+
+            isFiltering = true;
+            const allGroups = document.querySelectorAll('.project-group');
+            let hasVisibleGroup = false;
+
+            // Masquer tout avec un fondu
+            allGroups.forEach(group => {
+                if (group.style.display !== 'none' && group !== targetGroup) {
+                    hasVisibleGroup = true;
+                    group.classList.remove('active-group');
+                    setTimeout(() => {
+                        group.style.display = 'none';
+                    }, 400); // Correspond à la transition CSS
+                }
+            });
+
+            // Afficher la cible avec fondu
+            const delay = hasVisibleGroup ? 410 : 0;
+
+            if (targetGroup) {
+                setTimeout(() => {
+                    targetGroup.style.display = 'block';
+                    // Forcer un reflow pour activer la transition CSS
+                    void targetGroup.offsetWidth;
+                    targetGroup.classList.add('active-group');
+
+                    if (window.ScrollTrigger) {
+                        try {
+                            ScrollTrigger.refresh();
+                        } catch (e) { }
+                    }
+
+                    setTimeout(() => {
+                        isFiltering = false;
+                    }, 400);
+                }, delay); // Démarrer juste après la fin du masquage
+            } else {
+                isFiltering = false;
+            }
         }
+
+        // Ajouter la classe par défaut au chargement
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll('.project-group').forEach(group => {
+                if (group.style.display !== 'none') {
+                    group.classList.add('active-group');
+                }
+            });
+        });
     </script>
 </body>
-
-</html>
 
 </html>

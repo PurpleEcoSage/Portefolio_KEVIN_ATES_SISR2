@@ -175,7 +175,6 @@ nav {
     top: 0;
     background: transparent;
     backdrop-filter: blur(16px);
-    border-bottom: 1px solid var(--glass-border);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--glass-border);
     z-index: 1000;
@@ -186,7 +185,6 @@ nav {
 nav.scrolled {
     background: transparent;
     backdrop-filter: blur(16px);
-    border-bottom: 1px solid var(--glass-border);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--glass-border);
     padding: 1rem 0;
@@ -3151,4 +3149,18 @@ body.page-ready .cta-button {
     100% {
         box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
     }
+}
+
+/* ========================================= */
+/* PROJECT FILTERING TRANSITIONS             */
+/* ========================================= */
+.project-group {
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.project-group.active-group {
+    opacity: 1;
+    transform: translateY(0);
 }

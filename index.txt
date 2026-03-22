@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kevin Ates - Portfolio BTS SIO SISR</title>
-    <    <meta name="description" content="Portfolio de Kevin Ates, Ètudiant en BTS SIO option SISR. DÈcouvrez mes projets en administration systËmes, rÈseaux, cybersÈcuritÈ et mon expÈrience chez Infoconcept.">
-    <    <meta name="keywords" content="portfolio, bts sio, sisr, kevin ates, administrateur systËme, rÈseau, cybersÈcuritÈ, infoconcept">
+    <    <meta name="description" content="Portfolio de Kevin Ates, ÔøΩtudiant en BTS SIO option SISR. DÔøΩcouvrez mes projets en administration systÔøΩmes, rÔøΩseaux, cybersÔøΩcuritÔøΩ et mon expÔøΩrience chez Infoconcept.">
+    <    <meta name="keywords" content="portfolio, bts sio, sisr, kevin ates, administrateur systÔøΩme, rÔøΩseau, cybersÔøΩcuritÔøΩ, infoconcept">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +21,7 @@
 </head>
 <body>
     <!-- Theme Toggle -->
-    <button class="theme-toggle" id="themeToggle" aria-label="Activer le thËme sombre" aria-pressed="false">
+    <button class="theme-toggle" id="themeToggle" aria-label="Activer le thÔøΩme sombre" aria-pressed="false">
         <span class="theme-toggle-icon sun" aria-hidden="true">&#9728;</span>
         <span class="theme-toggle-icon moon" aria-hidden="true">&#9790;</span>
     </button>
@@ -291,7 +291,7 @@
                         </div>
                     </div>
                     <div class="portfolio-info">
-                        <h3>Installation de syst√®me de caisse complet</h3>
+                        <h3>Installation de monoposte complet</h3>
                         <p class="category">Projet en entreprise ‚Äì Infoconcept</p>
                         <p>
                             D√©ploiement sur site de solutions de caisse compl√®tes, incluant le poste principal, l'afficheur client, l'imprimante √† tickets et la configuration du logiciel de gestion AKEAD.
@@ -347,7 +347,7 @@
                         </div>
                     </div>
                     <div class="portfolio-info">
-                        <h3>Configuration de base de donn√©es MySQL</h3>
+                        <h3>Transfert de donnees AKEAD et Mysql</h3>
                         <p class="category">Projet en entreprise ‚Äì Infoconcept</p>
                         <p>
                             Mise en place et configuration de bases de donn√©es MySQL pour les logiciels de gestion. Utilisation de MySQL Administrator pour la gestion des utilisateurs et des permissions de base.
