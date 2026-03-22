@@ -3164,3 +3164,11 @@ body.page-ready .cta-button {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Force visibility of GSAP animated items when their tab becomes active */
+.project-group.active-group .gsap-reveal,
+.project-group.active-group .gsap-fade,
+.project-group.active-group .gsap-scale {
+    opacity: 1 !important;
+    transform: none !important;
+}
