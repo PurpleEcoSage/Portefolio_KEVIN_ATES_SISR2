@@ -1,0 +1,509 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Ates - Projet BTS</title>
+    <meta name="description"
+        content="Portfolio de Kevin Ates, étudiant en BTS SIO option SISR. Découvrez mes projets en administration systèmes, réseaux, cybersécurité et mon expérience chez Infoconcept.">
+    <meta name="keywords"
+        content="portfolio, bts sio, sisr, kevin ates, administrateur système, réseau, cybersécurité, infoconcept">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("0IKg4ABumGUnUfYNV");
+        })();
+    </script>
+    <!-- Dépendances GSAP & Lenis via defer pour de meilleures performances -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js" defer></script>
+</head>
+
+<body>
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Activer le thème sombre" aria-pressed="false">
+        <span class="theme-toggle-icon sun" aria-hidden="true">&#9728;</span>
+        <span class="theme-toggle-icon moon" aria-hidden="true">&#9790;</span>
+    </button>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-dots">
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+        </div>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header>
+        <nav id="navbar">
+            <div class="nav-container">
+                <a href="index.html#accueil" class="logo">
+                    <div class="logo-dots">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    Kevin
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html#accueil">Accueil</a></li>
+                    <li><a href="index.html#apropos">À propos de moi</a></li>
+                    <li><a href="index.html#entreprise">Mon entreprise</a></li>
+                    <li><a href="index.html#parcours">Parcours</a></li>
+                    <li><a href="index.html#missions">Missions</a></li>
+                    <li><a href="#projet-bts">Projet BTS</a></li>
+                    <li><a href="index.html#veille">Veille Technologique</a></li>
+                    <li><a href="index.html#projet-perso">Projet Personnel</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-header">
+                <div class="logo">
+                    <div class="logo-dots">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    Kevin
+                </div>
+            </div>
+            <ul class="mobile-menu-links">
+                <li><a href="index.html#accueil">Accueil</a></li>
+                <li><a href="index.html#apropos">À propos de moi</a></li>
+                <li><a href="index.html#entreprise">Mon entreprise</a></li>
+                <li><a href="index.html#parcours">Parcours</a></li>
+                <li><a href="index.html#missions">Missions</a></li>
+                <li><a href="#projet-bts">Projet BTS</a></li>
+                <li><a href="index.html#veille">Veille Technologique</a></li>
+                <li><a href="index.html#projet-perso">Projet Personnel</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="overlay" id="overlay"></div>
+    </header>
+
+    <main style="padding-top: 100px;">
+<!-- Projet BTS -->
+        <section class="portfolio" id="projet-bts">
+            <div class="container">
+                <h2 class="gsap-reveal" style="text-align: center; margin-bottom: 3rem; color: var(--primary);">Projet
+                    BTS</h2>
+                <div class="portfolio-grid"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <!-- Document 1 -->
+                    <div class="portfolio-item gsap-reveal"
+                        style="text-align: center; padding: 2rem; background: var(--secondary); border-radius: 15px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--primary)"
+                            stroke-width="2"
+                            style="margin-bottom: 1rem; margin-left: auto; margin-right: auto; display: block;">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                        <h3 style="margin-bottom: 1rem;">Projet Système</h3>
+                        <p style="margin-bottom: 1.5rem; color: var(--gray);">Documentation de conception et déploiement
+                            du système.</p>
+                        <a href="projet systeme.pdf" class="cta-button magnetic-btn" download target="_blank"
+                            style="padding: 0.8rem 1.5rem; display: inline-block;">Télécharger le PDF</a>
+                    </div>
+                    <!-- Document 2 -->
+                    <div class="portfolio-item gsap-reveal"
+                        style="text-align: center; padding: 2rem; background: var(--secondary); border-radius: 15px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--primary)"
+                            stroke-width="2"
+                            style="margin-bottom: 1rem; margin-left: auto; margin-right: auto; display: block;">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                        <h3 style="margin-bottom: 1rem;">Projet Réseau</h3>
+                        <p style="margin-bottom: 1.5rem; color: var(--gray);">Architecture et configuration de
+                            l'infrastructure réseau.</p>
+                        <a href="projet reseau.pdf" class="cta-button magnetic-btn" download target="_blank"
+                            style="padding: 0.8rem 1.5rem; display: inline-block;">Télécharger le PDF</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html#accueil">Accueil</a>
+                <a href="index.html#apropos">À propos de moi</a>
+                <a href="index.html#entreprise">Entreprise</a>
+                <a href="index.html#missions">Missions</a>
+                <a href="#projet-bts">Projet BTS</a>
+                <a href="index.html#parcours">Parcours</a>
+                <a href="index.html#veille">Veille</a>
+                <a href="index.html#projet-perso">Projet Personnel</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Kevin Ates – Portfolio BTS SIO SISR. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Conteneur pour les messages d'accessibilité -->
+    <div id="aria-live-region" aria-live="polite" aria-atomic="true"
+        style="position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">
+    </div>
+
+    <script>
+        // Announce message function for accessibility (already implemented)
+        function announceMessage(message, type = 'status') {
+            const liveRegion = document.getElementById('aria-live-region');
+            if (liveRegion) {
+                liveRegion.textContent = message;
+                // Optionally, clear after some time if it's a transient message
+                if (type === 'status') {
+                    setTimeout(() => {
+                        liveRegion.textContent = '';
+                    }, 5000);
+                }
+            }
+            // Fallback for visual users or if live region is not preferred for primary alerts
+            if (type === 'alert') {
+                alert(message);
+            }
+        }
+
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        body.setAttribute('data-theme', currentTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const theme = body.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            body.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+        });
+
+        // Loader
+        window.addEventListener('load', () => {
+            document.body.classList.add('page-ready');
+            setTimeout(() => {
+                document.getElementById('loader').classList.add('hidden');
+            }, 800);
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const overlay = document.getElementById('overlay');
+        const mobileLinks = document.querySelectorAll('.mobile-menu-links a');
+
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
+        });
+
+        overlay.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (!target) return;
+                e.preventDefault();
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+
+        // EmailJS form (already implemented)
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const submitBtn = contactForm.querySelector('.submit-btn');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Envoi...';
+                submitBtn.disabled = true;
+
+                const formData = {
+                    from_name: document.getElementById('name').value,
+                    from_email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value || 'Non renseigné',
+                    message: document.getElementById('message').value,
+                };
+
+                function sendEmail() {
+                    emailjs.send('service_nx17lod', 'template_cs4wyu7', formData)
+                        .then(() => {
+                            const confirmationData = {
+                                to_email: formData.from_email,
+                                to_name: formData.from_name,
+                                message: formData.message
+                            };
+
+                            return emailjs.send('service_nx17lod', 'template_lx4dnos', confirmationData);
+                        })
+                        .then(() => {
+                            alert('✅… Votre message a été envoyé avec succès ! Vous allez recevoir un email de confirmation.');
+                            e.target.reset();
+                            submitBtn.textContent = originalText;
+                            submitBtn.disabled = false;
+                        })
+                        .catch((error) => {
+                            console.error('Erreur:', error);
+                            alert('âŒ Une erreur est survenue. Veuillez me contacter directement à  kevinonurates@gmail.com');
+                            submitBtn.textContent = originalText;
+                            submitBtn.disabled = false;
+                        });
+                }
+
+                sendEmail();
+            });
+        }
+
+        // Initialiser les animations une fois que le DOM est chargé y compris les scripts defer
+        document.addEventListener("DOMContentLoaded", function () {
+            initAnimations();
+        });
+
+        function initAnimations() {
+            // ----------------------------------------------------
+            // ADVANCED SCROLL ANIMATIONS (GSAP + Lenis)
+            // ----------------------------------------------------
+
+            // Initialize Lenis for Smooth Scrolling
+            const lenis = new Lenis({
+                duration: 1.2,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                direction: 'vertical',
+                gestureDirection: 'vertical',
+                smooth: true,
+                mouseMultiplier: 1,
+                smoothTouch: false,
+                touchMultiplier: 2,
+                infinite: false,
+            });
+
+            // Get scroll value
+            lenis.on('scroll', ScrollTrigger.update);
+
+            gsap.ticker.add((time) => {
+                lenis.raf(time * 1000);
+            });
+
+            gsap.ticker.lagSmoothing(0);
+
+            // GSAP Animations
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Define animations
+            // 1. Reveal (Text & Elements sliding up)
+            gsap.utils.toArray('.gsap-reveal').forEach(elem => {
+                gsap.fromTo(elem,
+                    { y: 50, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        ease: "power3.out",
+                        scrollTrigger: {
+                            trigger: elem,
+                            start: "top 90%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // 2. Fade (Simple opacity fade)
+            gsap.utils.toArray('.gsap-fade').forEach(elem => {
+                gsap.fromTo(elem,
+                    { opacity: 0 },
+                    {
+                        opacity: 1,
+                        duration: 1.2,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: elem,
+                            start: "top 85%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // 3. Scale (Images/Cards zooming in slightly)
+            gsap.utils.toArray('.gsap-scale').forEach(elem => {
+                gsap.fromTo(elem,
+                    { scale: 0.9, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 1,
+                        ease: "back.out(1.7)",
+                        scrollTrigger: {
+                            trigger: elem,
+                            start: "top 90%",
+                            toggleActions: "play reverse play reverse"
+                        }
+                    }
+                );
+            });
+
+            // Magnetic Buttons Logic
+            const magneticBtns = document.querySelectorAll('.magnetic-btn');
+            magneticBtns.forEach(btn => {
+                btn.addEventListener('mousemove', function (e) {
+                    const position = btn.getBoundingClientRect();
+                    const x = e.clientX - position.left - position.width / 2;
+                    const y = e.clientY - position.top - position.height / 2;
+
+                    gsap.to(btn, {
+                        x: x * 0.3,
+                        y: y * 0.5,
+                        duration: 0.6,
+                        ease: "power3.out"
+                    });
+                });
+
+                btn.addEventListener('mouseleave', function (e) {
+                    gsap.to(btn, {
+                        x: 0,
+                        y: 0,
+                        duration: 0.6,
+                        ease: "elastic.out(1, 0.3)"
+                    });
+                });
+            });
+
+            // Keep original section observer for compatibility 
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('section').forEach(section => sectionObserver.observe(section));
+        }
+    </script>
+    <script>
+        let isFiltering = false;
+
+        function filterProjects(categoryId, btn) {
+            if (isFiltering) return;
+
+            const targetGroup = document.getElementById(categoryId + '-projects');
+            if (targetGroup && targetGroup.style.display === 'block' && targetGroup.classList.contains('active-group')) {
+                return;
+            }
+
+            document.querySelectorAll('.project-btn').forEach(b => {
+                b.classList.remove('active');
+            });
+            if (btn) {
+                btn.classList.add('active');
+            }
+
+            isFiltering = true;
+            const allGroups = document.querySelectorAll('.project-group');
+            let hasVisibleGroup = false;
+
+            // Masquer tout avec un fondu
+            allGroups.forEach(group => {
+                if (group.style.display !== 'none' && group !== targetGroup) {
+                    hasVisibleGroup = true;
+                    group.classList.remove('active-group');
+                    setTimeout(() => {
+                        group.style.display = 'none';
+                    }, 400); // Correspond à la transition CSS
+                }
+            });
+
+            // Afficher la cible avec fondu
+            const delay = hasVisibleGroup ? 410 : 0;
+
+            if (targetGroup) {
+                setTimeout(() => {
+                    targetGroup.style.display = 'block';
+                    // Forcer un reflow pour activer la transition CSS
+                    void targetGroup.offsetWidth;
+                    targetGroup.classList.add('active-group');
+
+                    if (window.ScrollTrigger) {
+                        try {
+                            ScrollTrigger.refresh();
+                        } catch (e) { }
+                    }
+
+                    setTimeout(() => {
+                        isFiltering = false;
+                    }, 400);
+                }, delay); // Démarrer juste après la fin du masquage
+            } else {
+                isFiltering = false;
+            }
+        }
+
+        // Ajouter la classe par défaut au chargement
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll('.project-group').forEach(group => {
+                if (group.style.display !== 'none') {
+                    group.classList.add('active-group');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
