@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -64,8 +64,9 @@
                     <li><a href="#parcours">Parcours</a></li>
                     <li><a href="#missions">Missions</a></li>
                     <li><a href="projet-bts.html">Projet BTS</a></li>
-                    <li><a href="#veille">Veille Technologique</a></li>
-                    <li><a href="#projet-perso">Projet Personnel</a></li>
+                    <li><a href="#veille">Veille Tech.</a></li>
+                    <li><a href="#examens">Examens</a></li>
+                    <li><a href="#projet-perso">Perso.</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="hamburger" id="hamburger">
@@ -96,6 +97,7 @@
                 <li><a href="#missions">Missions</a></li>
                 <li><a href="projet-bts.html">Projet BTS</a></li>
                 <li><a href="#veille">Veille Technologique</a></li>
+                <li><a href="#examens">Dossier Examens</a></li>
                 <li><a href="#projet-perso">Projet Personnel</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -421,19 +423,24 @@
                     <div class="portfolio-grid">
                         <!-- Projet en entreprise 1 -->
                         <div class="portfolio-item gsap-reveal">
-                            <div class="portfolio-image">
-                                <img src="https://images.unsplash.com/photo-1573167507387-6b3a86cb7c94?w=800&fit=crop"
-                                    alt="Installation de système de caisse" width="400" height="300" loading="lazy">
+                            <div class="portfolio-image" style="background: #1570C1; display: flex; align-items: center; justify-content: center;">
+                                <img src="akeadlogo.png"
+                                    alt="Logo AKEAD" width="400" height="300" loading="lazy"
+                                    style="width: 55%; height: auto; object-fit: contain; padding: 2rem;">
                                 <div class="portfolio-overlay">
                                     <div class="portfolio-overlay-content">
                                         <h4>Voir le projet</h4>
                                         <p>Installation complète de caisses enregistreuses chez les clients.</p>
-                                        <a href="#" class="portfolio-link magnetic-btn">Voir la documentation</a>
+                                        <a href="Install monocaisse complet.pdf" class="portfolio-link magnetic-btn" download>Télécharger la documentation</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="portfolio-info">
-                                <h3>Installation de monoposte complet</h3>
+                                <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                                    <img src="akeadlogo.png" alt="AKEAD" loading="lazy"
+                                         style="height: 26px; width: auto; border-radius: 4px;">
+                                    <h3 style="margin: 0;">Installation de monoposte complet</h3>
+                                </div>
                                 <p class="category">Projet en entreprise – Infoconcept</p>
                                 <p>
                                     Déploiement sur site de solutions de caisse complètes, incluant le poste principal,
@@ -452,19 +459,24 @@
 
                         <!-- Projet en entreprise 2 -->
                         <div class="portfolio-item gsap-reveal">
-                            <div class="portfolio-image">
-                                <img src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=800&fit=crop"
-                                    alt="Déploiement d'images Windows" width="400" height="300" loading="lazy">
+                            <div class="portfolio-image" style="background: #0d1f3c; display: flex; align-items: center; justify-content: center;">
+                                <img src="acronis_logo.png"
+                                    alt="Logo Acronis" width="400" height="300" loading="lazy"
+                                    style="width: 70%; height: auto; object-fit: contain; padding: 2rem;">
                                 <div class="portfolio-overlay">
                                     <div class="portfolio-overlay-content">
                                         <h4>Voir le projet</h4>
                                         <p>Préparation de postes et de caisses avec Acronis True Image.</p>
-                                        <a href="#" class="portfolio-link magnetic-btn">Voir la documentation</a>
+                                        <a href="ACRONIS.pdf" class="portfolio-link magnetic-btn" download>Télécharger la documentation</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="portfolio-info">
-                                <h3>Déploiement d'images Windows via Acronis</h3>
+                                <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                                    <img src="acronis_logo.png" alt="Acronis" loading="lazy"
+                                         style="height: 24px; width: auto; border-radius: 4px; background: #0d1f3c; padding: 2px 6px;">
+                                    <h3 style="margin: 0;">Déploiement d'images Windows via Acronis</h3>
+                                </div>
                                 <p class="category">Projet en entreprise – Infoconcept</p>
                                 <p>
                                     Création et déploiement d'images système standardisées avec Acronis pour préparer
@@ -482,9 +494,10 @@
 
                         <!-- Projet en entreprise 3 -->
                         <div class="portfolio-item gsap-reveal">
-                            <div class="portfolio-image">
-                                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&fit=crop"
-                                    alt="Configuration MySQL" width="400" height="300" loading="lazy">
+                            <div class="portfolio-image" style="background: #f5f5f5; display: flex; align-items: center; justify-content: center;">
+                                <img src="elines.jpg"
+                                    alt="Caisse tactile Elines" width="400" height="300" loading="lazy"
+                                    style="width: 100%; height: 100%; object-fit: cover;">
                                 <div class="portfolio-overlay">
                                     <div class="portfolio-overlay-content">
                                         <h4>Voir le projet</h4>
@@ -519,39 +532,6 @@
                     <h3 style="text-align:center; margin-top: 4rem; margin-bottom: 2rem; color: var(--dark);">Projets
                         scolaires</h3>
                     <div class="portfolio-grid">
-                        <!-- Projet école 1 -->
-                        <div class="portfolio-item gsap-reveal">
-                            <div class="portfolio-image">
-                                <img src="https://images.unsplash.com/photo-1580106815433-a5b1d1d53d85?w=800&fit=crop"
-                                    alt="Active Directory & services réseau" width="400" height="300" loading="lazy">
-                                <div class="portfolio-overlay">
-                                    <div class="portfolio-overlay-content">
-                                        <h4>Voir le projet</h4>
-                                        <p>Gestion des utilisateurs et des postes via GPO et scripts.</p>
-                                        <a href="Compte rendu - AD-GPO-SF.pdf" class="portfolio-link magnetic-btn"
-                                            download>Télécharger
-                                            le dossier</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="portfolio-info">
-                                <h3>Active Directory : GPO & Scripts</h3>
-                                <p class="category">Projet Scolaire (SISR)</p>
-                                <p>
-                                    Déploiement d'un domaine AD, configuration de GPO pour standardiser les fonds
-                                    d'écran
-                                    et création de scripts (menu.bat, PowerShell) pour automatiser l'ajout
-                                    d'utilisateurs.
-                                </p>
-                                <div class="portfolio-tags">
-                                    <span class="portfolio-tag">Windows Server</span>
-                                    <span class="portfolio-tag">AD DS</span>
-                                    <span class="portfolio-tag">GPO</span>
-                                    <span class="portfolio-tag">Scripting</span>
-                                </div>
-                            </div>
-                        </div>
-
                         <!-- Projet école 2 -->
                         <div class="portfolio-item gsap-reveal">
                             <div class="portfolio-image">
@@ -584,8 +564,6 @@
                             </div>
                         </div>
 
-
-
                         <!-- Projet école 3 (Pfsense) -->
                         <div class="portfolio-item gsap-reveal">
                             <div class="portfolio-image">
@@ -595,7 +573,7 @@
                                     <div class="portfolio-overlay-content">
                                         <h4>Voir le projet</h4>
                                         <p>Mise en place de haute disponibilité avec Pfsense (CARP).</p>
-                                        <a href="Compte Rendu - HD Pfsense .pdf" class="portfolio-link magnetic-btn"
+                                        <a href="ATES KEVIN _Haute_Dispo_Pfsense.pdf" class="portfolio-link magnetic-btn"
                                             download>Télécharger
                                             le dossier</a>
                                     </div>
@@ -605,14 +583,164 @@
                                 <h3>Haute Disponibilité Pfsense</h3>
                                 <p class="category">Projet Scolaire (SISR)</p>
                                 <p>
-                                    Installation et configuration de pare-feu Pfsense en cluster pour assurer la haute
+                                    Configuration de la haute disponibilité (CARP) sur pfSense pour assurer la
                                     disponibilité des services réseau et la redondance de la passerelle.
                                 </p>
                                 <div class="portfolio-tags">
-                                    <span class="portfolio-tag">Pfsense</span>
+                                    <span class="portfolio-tag">pfSense</span>
                                     <span class="portfolio-tag">Haute Disponibilité</span>
-                                    <span class="portfolio-tag">Pare-feu</span>
                                     <span class="portfolio-tag">Réseau</span>
+                                    <span class="portfolio-tag">Failover</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Projet école 4 (Partage Réseau) -->
+                        <div class="portfolio-item gsap-reveal">
+                            <div class="portfolio-image">
+                                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&fit=crop"
+                                    alt="Partage de fichiers en réseau" width="400" height="300" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-overlay-content">
+                                        <h4>Voir le projet</h4>
+                                        <p>Mise en place et sécurisation de partages réseau.</p>
+                                        <a href="Doc_Partage_Réseau.pdf" class="portfolio-link magnetic-btn"
+                                            download>Télécharger
+                                            le dossier</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3>Partage Réseau et Sécurité</h3>
+                                <p class="category">Projet Scolaire (SISR)</p>
+                                <p>
+                                    Configuration avancée de partages réseau avec gestion des droits d'accès (NTFS et partages) pour sécuriser l'accès aux données des utilisateurs.
+                                </p>
+                                <div class="portfolio-tags">
+                                    <span class="portfolio-tag">Partages</span>
+                                    <span class="portfolio-tag">Droits NTFS</span>
+                                    <span class="portfolio-tag">Windows Server</span>
+                                    <span class="portfolio-tag">Sécurité</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Projet école 5 (DHCP) -->
+                        <div class="portfolio-item gsap-reveal">
+                            <div class="portfolio-image">
+                                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&fit=crop"
+                                    alt="Serveur DHCP Windows" width="400" height="300" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-overlay-content">
+                                        <h4>Voir le projet</h4>
+                                        <p>Mise en place d'un serveur DHCP sous Windows Server.</p>
+                                        <a href="Doc_DHCP sur Windows Serveur.pdf" class="portfolio-link magnetic-btn"
+                                            download>Télécharger
+                                            le dossier</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3>Serveur DHCP sous Windows Server</h3>
+                                <p class="category">Projet Scolaire (SISR)</p>
+                                <p>
+                                    Installation et configuration du rôle DHCP sur Windows Server, incluant la création d'étendues, d'exclusions et de réservations pour une gestion dynamique des adresses IP.
+                                </p>
+                                <div class="portfolio-tags">
+                                    <span class="portfolio-tag">DHCP</span>
+                                    <span class="portfolio-tag">Windows Server</span>
+                                    <span class="portfolio-tag">Réseau</span>
+                                    <span class="portfolio-tag">Administration</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Projet école 6 (DHCP Pfsense) -->
+                        <div class="portfolio-item gsap-reveal">
+                            <div class="portfolio-image">
+                                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&fit=crop"
+                                    alt="Serveur DHCP Pfsense" width="400" height="300" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-overlay-content">
+                                        <h4>Voir le projet</h4>
+                                        <p>Configuration d'un serveur DHCP sous pfSense.</p>
+                                        <a href="DHCP SUR PFSENSE.pdf" class="portfolio-link magnetic-btn"
+                                            download>Télécharger
+                                            le dossier</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3>Serveur DHCP sous pfSense</h3>
+                                <p class="category">Projet Scolaire (SISR)</p>
+                                <p>
+                                    Mise en place et configuration du service DHCP sur un pare-feu pfSense pour automatiser l'attribution des adresses IP sur les différents réseaux locaux.
+                                </p>
+                                <div class="portfolio-tags">
+                                    <span class="portfolio-tag">DHCP</span>
+                                    <span class="portfolio-tag">pfSense</span>
+                                    <span class="portfolio-tag">Réseau</span>
+                                    <span class="portfolio-tag">Pare-feu</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Projet école 7 (GLPI) -->
+                        <div class="portfolio-item gsap-reveal">
+                            <div class="portfolio-image">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&fit=crop"
+                                    alt="Gestion de parc GLPI" width="400" height="300" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-overlay-content">
+                                        <h4>Voir le projet</h4>
+                                        <p>Mise en place de la gestion de parc avec GLPI.</p>
+                                        <a href="Procédure GLPI.pdf" class="portfolio-link magnetic-btn"
+                                            download>Télécharger
+                                            le dossier</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3>Gestion de parc avec GLPI</h3>
+                                <p class="category">Projet Scolaire (SISR)</p>
+                                <p>
+                                    Déploiement et configuration d'une solution de gestion de parc informatique (GLPI) pour le suivi des équipements, des tickets d'incidents et l'inventaire.
+                                </p>
+                                <div class="portfolio-tags">
+                                    <span class="portfolio-tag">GLPI</span>
+                                    <span class="portfolio-tag">Gestion de parc</span>
+                                    <span class="portfolio-tag">ITSM</span>
+                                    <span class="portfolio-tag">Inventaire</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Projet école 8 (Active Directory Pfsense) -->
+                        <div class="portfolio-item gsap-reveal">
+                            <div class="portfolio-image">
+                                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&fit=crop"
+                                    alt="Active Directory et pfSense" width="400" height="300" loading="lazy">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-overlay-content">
+                                        <h4>Voir le projet</h4>
+                                        <p>Mise en place d'une infrastructure Active Directory et pfSense.</p>
+                                        <a href="ACTIVVE DIRECTORY PFSENSE.pdf" class="portfolio-link magnetic-btn"
+                                            download>Télécharger
+                                            le dossier</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h3>Active Directory et pfSense</h3>
+                                <p class="category">Projet Scolaire (SISR)</p>
+                                <p>
+                                    Configuration d'un environnement Active Directory et d'un pare-feu pfSense.
+                                </p>
+                                <div class="portfolio-tags">
+                                    <span class="portfolio-tag">Active Directory</span>
+                                    <span class="portfolio-tag">pfSense</span>
+                                    <span class="portfolio-tag">Réseau</span>
+                                    <span class="portfolio-tag">Sécurité</span>
                                 </div>
                             </div>
                         </div>
@@ -825,6 +953,93 @@
             </div>
         </section>
 
+        <!-- Dossier Examens Section -->
+        <section class="services" id="examens">
+            <div class="container">
+                <h2 class="gsap-reveal" style="text-align: center; color: var(--primary); margin-bottom: 1rem;">Dossier Examens</h2>
+                <p class="gsap-reveal stagger-1" style="text-align: center; color: var(--gray); margin-bottom: 3rem; font-size: 1.05rem;">Documents officiels de l'épreuve E5 &ndash; BTS SIO SISR 2026</p>
+                <div class="services-grid">
+
+                    <!-- Fiche Système -->
+                    <div class="service-card gsap-reveal stagger-1" style="display:flex; flex-direction:column;">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <h3>Fiche SISR &ndash; Système</h3>
+                        <p>Fiche de situation professionnelle portant sur le déploiement d'un serveur de supervision Zabbix, la gestion de parc GLPI et le déploiement d'agents via GPO.</p>
+                        <div class="portfolio-tags" style="justify-content: center; margin: 1rem 0 1.5rem;">
+                            <span class="portfolio-tag">Serveur Zabbix</span>
+                            <span class="portfolio-tag">GLPI</span>
+                            <span class="portfolio-tag">Agent via GPO</span>
+                        </div>
+                        <a href="Fiche de situation professionnelle SISR systeme.pdf" class="cta-button magnetic-btn" download style="font-size: 0.9rem; padding: 0.7rem 1.8rem; margin-top: auto;">
+                            Télécharger
+                        </a>
+                    </div>
+
+                    <!-- Fiche Réseaux -->
+                    <div class="service-card gsap-reveal stagger-2" style="display:flex; flex-direction:column;">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="9" y="2" width="6" height="6" rx="1"></rect>
+                                <rect x="1" y="16" width="6" height="6" rx="1"></rect>
+                                <rect x="17" y="16" width="6" height="6" rx="1"></rect>
+                                <path d="M12 8v4M6 16v-2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"></path>
+                            </svg>
+                        </div>
+                        <h3>Fiche SISR &ndash; Réseaux</h3>
+                        <p>Fiche de situation professionnelle portant sur la mise en place de FreeRADIUS, la configuration d'un VPN Client to Site et le protocole L2TP IPsec.</p>
+                        <div class="portfolio-tags" style="justify-content: center; margin: 1rem 0 1.5rem;">
+                            <span class="portfolio-tag">FreeRADIUS</span>
+                            <span class="portfolio-tag">VPN Client to Site</span>
+                            <span class="portfolio-tag">L2TP IPsec</span>
+                        </div>
+                        <a href="Fiche de situation professionnelle SISR reseaux.pdf" class="cta-button magnetic-btn" download style="font-size: 0.9rem; padding: 0.7rem 1.8rem; margin-top: auto;">
+                            Télécharger
+                        </a>
+                    </div>
+
+                    <!-- Tableau de Synthèse E5 -->
+                    <div class="service-card gsap-reveal stagger-3" style="display:flex; flex-direction:column;">
+                        <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                            </svg>
+                        </div>
+                        <h3>Tableau de Synthèse E5</h3>
+                        <p>Document officiel récapitulant l'ensemble des situations professionnelles et compétences acquises &ndash; BTS SIO 2026.</p>
+                        <div class="portfolio-tags" style="justify-content: center; margin: 1rem 0 1.5rem;">
+                            <span class="portfolio-tag">BTS SIO 2026</span>
+                            <span class="portfolio-tag">Épreuve E5</span>
+                            <span class="portfolio-tag">SISR</span>
+                        </div>
+                        <a href="EPREUVE E5 TABLEAU DE SYNTHESE - BTS SIO 2026.pdf" class="cta-button magnetic-btn" download style="font-size: 0.9rem; padding: 0.7rem 1.8rem; margin-top: auto;">
+                            Télécharger
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Schéma réseau -->
+                <div style="text-align: center; margin-top: 2.5rem;">
+                    <a href="SHEMAS.jpeg" target="_blank" rel="noopener noreferrer" class="cta-button magnetic-btn" style="display: inline-flex; align-items: center; gap: 0.6rem; font-size: 0.95rem; padding: 0.85rem 2rem;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                        Voir le schéma d'infrastructure
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Section -->
         <section class="contact" id="contact">
             <div class="container">
@@ -915,6 +1130,7 @@
                 <a href="#parcours">Parcours</a>
                 <a href="#veille">Veille</a>
                 <a href="#projet-perso">Projet Personnel</a>
+                <a href="#examens">Dossier Examens</a>
                 <a href="#contact">Contact</a>
             </div>
             <div class="footer-bottom">
@@ -961,11 +1177,21 @@
 
         // Loader
         window.addEventListener('load', () => {
-            document.body.classList.add('page-ready');
-            setTimeout(() => {
-                document.getElementById('loader').classList.add('hidden');
-            }, 800);
+            hideLoader();
         });
+
+        // Failsafe: hide loader after 3 seconds anyway
+        setTimeout(() => {
+            hideLoader();
+        }, 3000);
+
+        function hideLoader() {
+            const loader = document.getElementById('loader');
+            if (loader && !loader.classList.contains('hidden')) {
+                document.body.classList.add('page-ready');
+                loader.classList.add('hidden');
+            }
+        }
 
         // Navbar scroll effect
         window.addEventListener('scroll', () => {
@@ -1045,14 +1271,14 @@
                             return emailjs.send('service_nx17lod', 'template_lx4dnos', confirmationData);
                         })
                         .then(() => {
-                            alert('✅… Votre message a été envoyé avec succès ! Vous allez recevoir un email de confirmation.');
+                            alert('✅ Votre message a été envoyé avec succès ! Vous allez recevoir un email de confirmation.');
                             e.target.reset();
                             submitBtn.textContent = originalText;
                             submitBtn.disabled = false;
                         })
                         .catch((error) => {
                             console.error('Erreur:', error);
-                            alert('âŒ Une erreur est survenue. Veuillez me contacter directement à  kevinonurates@gmail.com');
+                            alert('❌ Une erreur est survenue. Veuillez me contacter directement à kevinonurates@gmail.com');
                             submitBtn.textContent = originalText;
                             submitBtn.disabled = false;
                         });
@@ -1068,10 +1294,6 @@
         });
 
         function initAnimations() {
-            // ----------------------------------------------------
-            // ADVANCED SCROLL ANIMATIONS (GSAP + Lenis)
-            // ----------------------------------------------------
-
             // Initialize Lenis for Smooth Scrolling
             const lenis = new Lenis({
                 duration: 1.2,
@@ -1085,7 +1307,6 @@
                 infinite: false,
             });
 
-            // Get scroll value
             lenis.on('scroll', ScrollTrigger.update);
 
             gsap.ticker.add((time) => {
@@ -1171,13 +1392,12 @@
                     gsap.to(btn, {
                         x: 0,
                         y: 0,
-                        duration: 0.6,
+                        duration: 1,
                         ease: "elastic.out(1, 0.3)"
                     });
                 });
             });
 
-            // Keep original section observer for compatibility 
             const sectionObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
