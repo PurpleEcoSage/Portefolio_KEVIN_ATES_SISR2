@@ -126,7 +126,7 @@ body {
 
 /* Typography */
 h1 {
-    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-size: clamp(2rem, 8vw, 4.5rem);
     font-weight: 300;
     line-height: 1.2;
     letter-spacing: -0.02em;
@@ -134,7 +134,7 @@ h1 {
 }
 
 h2 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-size: clamp(1.75rem, 5vw, 3.5rem);
     font-weight: 300;
     margin-bottom: 2rem;
     letter-spacing: -0.01em;
@@ -335,7 +335,19 @@ nav.scrolled {
     height: 2px;
     background: var(--dark);
     margin: 3px 0;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
 }
 
 /* Hero Section */
@@ -908,8 +920,8 @@ section {
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
 }
 
 .portfolio-item {
@@ -1072,8 +1084,8 @@ section {
 
 .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -1453,6 +1465,15 @@ footer {
     justify-content: center;
     gap: 2rem;
     margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .footer-links {
+        gap: 1.5rem;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .footer-links a {
@@ -1486,8 +1507,10 @@ footer {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     z-index: 999;
-    transition: left 0.3s ease;
-    box-shadow: 2px 0 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
 }
 
 [data-theme="dark"] .mobile-menu {
@@ -1571,7 +1594,11 @@ footer {
 /* Responsive – contenu et layout : à partir de 768px */
 @media (max-width: 768px) {
     .container {
-        padding: 0 1.5rem;
+        padding: 0 1.25rem;
+    }
+
+    section {
+        padding: 3.5rem 0;
     }
 
     .hero {
@@ -1584,12 +1611,30 @@ footer {
     }
 
     .hero .subtitle {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .hero .cta-button {
+        padding: 0.8rem 2rem;
+        font-size: 0.9rem;
     }
 
     .about-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 2.5rem;
+        text-align: center;
+    }
+
+    .about-text {
+        order: 2;
+    }
+
+    .about-image {
+        order: 1;
+        max-width: 500px;
+        margin: 0 auto;
     }
 
     .contact-content {
@@ -1597,8 +1642,73 @@ footer {
     }
 
     .testimonials-wrapper {
-        overflow: visible;
+        padding: 0;
     }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    section {
+        padding: 2.5rem 0;
+    }
+
+    .hero h1 {
+        font-size: 1.85rem;
+    }
+
+    .theme-toggle {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+
+    .team-stats {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .stat-number {
+        font-size: 1.75rem;
+    }
+
+    .project-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .portfolio-info {
+        padding: 1.25rem;
+    }
+
+    .portfolio-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .method-item {
+        padding: 1.5rem;
+    }
+
+    .card-body {
+        padding: 1.5rem;
+    }
+
+    .pricing-card {
+        padding: 2rem 1.5rem;
+    }
+}
 
     .testimonials-grid {
         animation: none;
@@ -2359,10 +2469,11 @@ body.page-ready .cta-button {
 .project-filters {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1rem;
     margin-bottom: 2rem;
     flex-wrap: wrap;
     margin-top: 2rem;
+    padding: 0 1rem;
 }
 
 .project-btn {
@@ -2430,8 +2541,8 @@ body.page-ready .cta-button {
 
 .methodologie-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
 }
 
 .method-item {
@@ -3205,8 +3316,8 @@ body.page-ready .cta-button {
 
 .examens-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
     align-items: stretch;
 }
 
